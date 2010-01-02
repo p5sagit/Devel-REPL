@@ -322,7 +322,7 @@ the following:
 
 =item *
 
-L<Moose> >= 0.64
+L<Moose> >= 0.90
 
 =item *
 
@@ -331,10 +331,6 @@ L<MooseX::Object::Pluggable> >= 0.0009
 =item *
 
 L<MooseX::Getopt> >= 0.15
-
-=item *
-
-L<MooseX::AttributeHelpers> >= 0.14
 
 =item *
 

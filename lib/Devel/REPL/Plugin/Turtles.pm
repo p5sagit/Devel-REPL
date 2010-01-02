@@ -3,8 +3,6 @@ use Devel::REPL::Plugin;
 
 use Scalar::Util qw(reftype);
 
-use MooseX::AttributeHelpers;
-
 use namespace::clean -except => [ 'meta' ];
 
 has default_command_prefix => (
@@ -14,7 +12,7 @@ has default_command_prefix => (
 );
 
 has turtles_matchers => (
-  metaclass => "Collection::Array",
+  traits => ["Collection::Array"],
   isa => "ArrayRef[RegexpRef|CodeRef]",
   is  => "rw",
   lazy => 1,
