@@ -57,12 +57,16 @@ sub line_needs_continuation
   $line .= "\n;;";
 
   my $document = PPI::Document->new(\$line);
-  return 0 if !defined($document);
+  unless ( defined($document) ) {
+     die "PPI failed to parse document '$line'\n";
+  }
 
   # adding ";" to a complete document adds a PPI::Statement::Null. we added a ;;
   # so if it doesn't end in null then there's probably something that's
   # incomplete
-  return 0 if $document->child(-1)->isa('PPI::Statement::Null');
+  unless ( $document->child(-1)->isa('PPI::Statement::Null') ) {
+     return 1;
+  }
 
   # this could use more logic, such as returning 1 on s/foo/ba<Enter>
   my $unfinished_structure = sub
