@@ -327,7 +327,9 @@ output, or even add commands to the shell environment.
 
 A number of plugins ship with C<Devel::REPL>, and more are available on the
 CPAN. Some of the shipped plugins are loaded in the default profile, mentioned
-above.
+above.  These plugins can be loaded in your C<< $HOME/.re.pl/repl.rc >> like:
+
+  load_plugin qw( CompletionDriver::Global DumpHistory );
 
 Writing your own plugins is not difficult, and is discussed in the
 L<Devel::REPL::Plugin> manual page, along with links to the manual pages of
