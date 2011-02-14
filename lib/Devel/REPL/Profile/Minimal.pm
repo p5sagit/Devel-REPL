@@ -1,4 +1,4 @@
-package Devel::REPL::Profile::Default;
+package Devel::REPL::Profile::Minimal;
 
 use Moose;
 use namespace::clean -except => [ 'meta' ];
