@@ -287,6 +287,34 @@ L<Devel::REPL::Plugin::Commands>
 
 L<Devel::REPL::Plugin::MultiLine::PPI>
 
+=item *
+
+L<Devel::REPL::Plugin::Colors>
+
+=item *
+
+L<Devel::REPL::Plugin::Completion>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::INC>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::LexEnv>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::Keywords>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::Methods>
+
+=item *
+
+L<Devel::REPL::Plugin::ReadlineHistory>
+
 =back
 
 =head2 Plugins
