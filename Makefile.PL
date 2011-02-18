@@ -41,7 +41,7 @@ feature 'INC completion driver - tab complete module names in use and require',
     'File::Next' => 0;
 
 feature 'Interrupt plugin - traps SIGINT to kill long-running lines',
-    -default => 1,
+    -default => (($^O =~ /Win32/) ? 0 : 1),
     'Sys::SigAction' => 0;
 
 feature 'Keywords completion driver - tab complete Perl keywords and operators',
