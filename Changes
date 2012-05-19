@@ -1,3 +1,6 @@
+1.003013
+  - Make Sys::SigAction optional dependency for Win32 systems
+  - Apply some plugin related patchs from Caleb Cushing
 1.003012
   - Remove some old code to avoid a future Moose warning
 1.003011
