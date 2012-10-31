@@ -1,7 +1,9 @@
+1.003014 - 2012-10-31
   - now using native Moose attribute traits, instead of the deprecated
     MooseX::AttributeHelper (thanks, Justin Hunter!)
   - now using namespace::autoclean rather than namespace::clean (thanks, Karen
     Etheridge!)
+
 1.003013
   - Make Sys::SigAction optional dependency for Win32 systems
   - Apply some plugin related patchs from Caleb Cushing
