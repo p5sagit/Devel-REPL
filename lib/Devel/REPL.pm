@@ -374,10 +374,6 @@ L<MooseX::Getopt> >= 0.18
 
 =item *
 
-L<MooseX::AttributeHelpers> >= 0.16
-
-=item *
-
 L<namespace::clean>
 
 =item *
