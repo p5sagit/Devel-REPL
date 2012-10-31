@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::Colors;
 
 use Devel::REPL::Plugin;
 use Term::ANSIColor;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has normal_color => (
   is => 'rw', lazy => 1,

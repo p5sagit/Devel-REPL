@@ -5,7 +5,7 @@ use Devel::REPL;
 use File::HomeDir;
 use File::Spec;
 use vars qw($CURRENT_SCRIPT);
-use namespace::clean -except => [ qw(meta) ];
+use namespace::autoclean;
 
 with 'MooseX::Getopt';
 

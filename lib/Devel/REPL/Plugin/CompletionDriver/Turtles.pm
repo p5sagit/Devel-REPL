@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ "meta" ];
+use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

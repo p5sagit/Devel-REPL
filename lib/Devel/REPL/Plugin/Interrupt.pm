@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::Interrupt;
 
 use Devel::REPL::Plugin;
 use Sys::SigAction qw(set_sig_handler);
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 around 'run' => sub {
     my ($orig, $self) = (shift, shift);

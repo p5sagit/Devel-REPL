@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::ShowClass;
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has 'metaclass_cache' => (
     is      => 'ro',

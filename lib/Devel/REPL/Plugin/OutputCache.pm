@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::OutputCache;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has output_cache => (
     is      => 'rw',

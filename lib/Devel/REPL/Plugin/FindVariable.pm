@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::FindVariable;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 sub find_variable {
     my ($self, $name) = @_;

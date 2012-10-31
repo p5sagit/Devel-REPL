@@ -16,7 +16,7 @@ requires 'Term::ReadLine';
 requires 'Moose' => '0.93';
 requires 'MooseX::Object::Pluggable' => '0.0009';
 requires 'MooseX::Getopt' => '0.18';
-requires 'namespace::clean';
+requires 'namespace::autoclean';
 requires 'File::HomeDir';
 requires 'Task::Weaken';
 requires 'B::Concise';

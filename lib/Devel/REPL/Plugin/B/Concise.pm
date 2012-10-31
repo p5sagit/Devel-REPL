@@ -7,7 +7,7 @@ use B::Concise ();
 
 B::Concise::compileOpts(qw(-nobanner));
 
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

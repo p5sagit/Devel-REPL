@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::MultiLine::PPI;
 
 use Devel::REPL::Plugin;
 use PPI;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has 'continuation_prompt' => (
   is => 'rw', required => 1, lazy => 1,

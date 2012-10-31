@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::History;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has 'history' => (
    isa => 'ArrayRef', is => 'rw', required => 1, lazy => 1,

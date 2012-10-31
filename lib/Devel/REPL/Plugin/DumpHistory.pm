@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::DumpHistory;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 ## Seems to be a sequence issue with requires
 # requires qw{ history }; 

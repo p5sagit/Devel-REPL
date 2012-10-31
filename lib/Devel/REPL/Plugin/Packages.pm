@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::Packages;
 use Devel::REPL::Plugin;
 
-use namespace::clean -except => [ "meta" ];
+use namespace::autoclean;
 
 use vars qw($PKG_SAVE);
 

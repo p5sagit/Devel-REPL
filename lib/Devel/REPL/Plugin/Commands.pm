@@ -3,7 +3,7 @@ package Devel::REPL::Plugin::Commands;
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
 
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 use vars qw($COMMAND_INSTALLER);
 
 has 'command_set' => (

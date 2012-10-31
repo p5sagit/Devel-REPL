@@ -5,7 +5,7 @@ use Devel::REPL::Plugin;
 
 use Devel::Peek qw(Dump);
 
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

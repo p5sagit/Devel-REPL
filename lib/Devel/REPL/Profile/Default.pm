@@ -1,7 +1,7 @@
 package Devel::REPL::Profile::Default;
 
 use Moose;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 with 'Devel::REPL::Profile';
 

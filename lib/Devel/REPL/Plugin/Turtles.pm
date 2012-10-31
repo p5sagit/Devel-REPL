@@ -3,7 +3,7 @@ use Devel::REPL::Plugin;
 
 use Scalar::Util qw(reftype);
 
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has default_command_prefix => (
   isa => "RegexpRef",

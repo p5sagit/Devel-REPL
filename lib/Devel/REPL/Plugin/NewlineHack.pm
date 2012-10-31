@@ -7,7 +7,7 @@
 package Devel::REPL::Plugin::NewlineHack;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 warn <<EOW;
 No longer required, extra newline automatically produced for Gnu readline

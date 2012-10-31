@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::Refresh;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 use Module::Refresh;
 
 # before evaluating the code, ask Module::Refresh to refresh

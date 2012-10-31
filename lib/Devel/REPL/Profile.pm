@@ -1,7 +1,6 @@
 package Devel::REPL::Profile;
 
 use Moose::Role;
-use namespace::clean -except => [ 'meta' ];
 
 requires 'apply_profile';
 
@@ -14,7 +13,7 @@ Devel::REPL::Profile
  package Devel::REPL::Profile::MyProject;
  
  use Moose;
- use namespace::clean -except => [ 'meta' ];
+ use namespace::autoclean;
  
  with 'Devel::REPL::Profile';
  

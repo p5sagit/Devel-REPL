@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::Nopaste;
 
 use Devel::REPL::Plugin;
 use Moose::Util::TypeConstraints;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 use Scalar::Util qw(blessed);
 
 sub BEFORE_PLUGIN {

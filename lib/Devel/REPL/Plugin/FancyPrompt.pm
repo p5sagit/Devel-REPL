@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::FancyPrompt;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has 'fancy_prompt' => (
   is => 'rw', lazy => 1,

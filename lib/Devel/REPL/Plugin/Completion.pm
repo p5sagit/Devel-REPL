@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::Completion;
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has current_matches => (
    is => 'rw',

@@ -2,7 +2,7 @@ package Devel::REPL;
 
 use Term::ReadLine;
 use Moose;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
 our $VERSION = '1.003013';
@@ -374,7 +374,7 @@ L<MooseX::Getopt> >= 0.18
 
 =item *
 
-L<namespace::clean>
+L<namespace::autoclean>
 
 =item *
 

@@ -234,7 +234,7 @@ take a look at it:
       use Moose; ### advanced OOP system for Perl
 
       ### keep those exports/imports out of our namespace
-      use namespace::clean -except => [ 'meta' ];
+      use namespace::autoclean;
 
       with 'Devel::REPL::Profile';  ## seem perldoc Muse
 

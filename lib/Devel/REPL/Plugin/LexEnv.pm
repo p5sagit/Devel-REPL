@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::LexEnv;
 
 use Devel::REPL::Plugin;
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 use Lexical::Persistence;
 
 sub BEFORE_PLUGIN {
