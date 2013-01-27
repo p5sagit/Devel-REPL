@@ -1,12 +1,18 @@
 use strict;
 use warnings;
 use inc::Module::Install 0.91;
+use Module::Install::Repository;
 
 name 'Devel-REPL';
 perl_version '5.008001';
 all_from 'lib/Devel/REPL.pm';
 
 install_script 'script/re.pl';
+
+# r/w: p5sagit@git.shadowcat.co.uk:Devel-REPL.git
+# r/o: git://git.shadowcat.co.uk/p5sagit/Devel-REPL.git
+# homepage: http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=p5sagit/Devel-REPL.git
+auto_set_repository;
 
 # core
 requires 'File::Spec';
