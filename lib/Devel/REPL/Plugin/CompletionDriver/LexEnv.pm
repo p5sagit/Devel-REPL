@@ -16,8 +16,8 @@ around complete => sub {
   return $orig->(@_)
     unless $last->isa('PPI::Token::Symbol');
 
-  my $sigil = substr($last, 0, 1, '');
-  my $re = qr/^\Q$last/;
+  my ($sigil, $name) = split(//, $last, 2);
+  my $re = qr/^\Q$name/;
 
   return $orig->(@_),
          # ReadLine is weirdly inconsistent
