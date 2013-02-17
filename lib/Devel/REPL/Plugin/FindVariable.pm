@@ -1,7 +1,8 @@
 package Devel::REPL::Plugin::FindVariable;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
+use Package::Stash;
 
 sub find_variable {
     my ($self, $name) = @_;
@@ -21,11 +22,11 @@ sub find_variable {
                         : 'main';
     my $package = $name =~ s/^(.*)(::|')// ? $1 : $default_package;
 
-    my $meta = Class::MOP::Class->initialize($package);
+    my $meta = Package::Stash->new($package);
 
-    # Class::MOP::Package::has_package_symbol method *requires* a sigil
-    return unless length($sigil) and $meta->has_package_symbol("$sigil$name");
-    $meta->get_package_symbol("$sigil$name");
+    # Package::Stash::has_symbol method *requires* a sigil
+    return unless length($sigil) and $meta->has_symbol("$sigil$name");
+    $meta->get_symbol("$sigil$name");
 }
 
 1;

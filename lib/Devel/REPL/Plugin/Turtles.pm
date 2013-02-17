@@ -3,24 +3,29 @@ use Devel::REPL::Plugin;
 
 use Scalar::Util qw(reftype);
 
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(RegexpRef ArrayRef CodeRef AnyOf);
 
 has default_command_prefix => (
-  isa => "RegexpRef",
+  isa => RegexpRef,
   is  => "rw",
+  lazy => 1,
   default => sub { qr/\#/ },
 );
 
 has turtles_matchers => (
-  metaclass => "Collection::Array",
-  isa => "ArrayRef[RegexpRef|CodeRef]",
+  isa => ArrayRef[AnyOf[RegexpRef,CodeRef]],
   is  => "rw",
   lazy => 1,
-  default => sub { my $prefix = shift->default_command_prefix; [qr/^ $prefix (\w+) \s* (.*) /x] },
-  handles => {
-    add_turtles_matcher => 'unshift',
+  default => sub {
+      my $prefix = shift->default_command_prefix; [qr/^ $prefix (\w+) \s* (.*) /x]
   },
 );
+
+sub add_turtles_matcher {
+  my $self = shift;
+  unshift @{$self->turtles_matchers}, @_;
+}
 
 around 'formatted_eval' => sub {
   my $next = shift;

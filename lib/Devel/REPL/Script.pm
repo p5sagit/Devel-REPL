@@ -1,29 +1,44 @@
 package Devel::REPL::Script;
 
-use Moose;
+use Moo;
 use Devel::REPL;
 use File::HomeDir;
 use File::Spec;
 use vars qw($CURRENT_SCRIPT);
-use namespace::autoclean;
-
-with 'MooseX::Getopt';
+use namespace::sweep;
+use Getopt::Long;
+use MooX::Types::MooseLike::Base qw(Str InstanceOf);
+use Module::Load ();
+use Carp qw(confess);
 
 has 'rcfile' => (
-  is => 'ro', isa => 'Str', required => 1, default => sub { 'repl.rc' },
+  is => 'rw',
+  isa => Str,
+  required => 1,
 );
 
 has 'profile' => (
-  is       => 'ro',
-  isa      => 'Str',
+  is       => 'rw',
+  isa      => Str,
   required => 1,
-  default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Default' },
 );
 
 has '_repl' => (
-  is => 'ro', isa => 'Devel::REPL', required => 1,
+  is => 'ro', isa => InstanceOf('Devel::REPL'), required => 1,
   default => sub { Devel::REPL->new() }
 );
+
+sub new_with_options {
+  my ($class) = @_;
+
+  my $rcfile  = 'repl.rc';
+  my $profile = $ENV{DEVEL_REPL_PROFILE} || 'Default';
+  GetOptions(
+      'rcfile=s'  => \$rcfile,
+      'profile=s' => \$profile,
+  );
+  $class->new(profile => $profile, rcfile => $rcfile);
+}
 
 sub BUILD {
   my ($self) = @_;
@@ -34,7 +49,7 @@ sub BUILD {
 sub load_profile {
   my ($self, $profile) = @_;
   $profile = "Devel::REPL::Profile::${profile}" unless $profile =~ /::/;
-  Class::MOP::load_class($profile);
+  Module::Load::load($profile);
   confess "Profile class ${profile} doesn't do 'Devel::REPL::Profile'"
     unless $profile->does('Devel::REPL::Profile');
   $profile->new->apply_profile($self->_repl);

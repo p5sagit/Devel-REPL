@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::FancyPrompt;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
 
 has 'fancy_prompt' => (
   is => 'rw', lazy => 1,
@@ -34,7 +34,7 @@ has 'fancy_continuation_prompt' => (
 );
 
 has 'lines_read' => (
-  is => 'rw', lazy => 1, default => 0,
+  is => 'rw', lazy => 1, default => sub { 0 },
 );
 
 around 'prompt' => sub {

@@ -1,10 +1,11 @@
 package Devel::REPL::Plugin::History;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(ArrayRef);
 
 has 'history' => (
-   isa => 'ArrayRef', is => 'rw', required => 1, lazy => 1,
+   isa => ArrayRef, is => 'rw', required => 1, lazy => 1,
    default => sub { [] }
 );
 

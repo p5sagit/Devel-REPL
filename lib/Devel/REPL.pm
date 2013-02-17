@@ -1,15 +1,30 @@
 package Devel::REPL;
 
 use Term::ReadLine;
-use Moose;
-use namespace::autoclean;
+use Moo;
+use namespace::sweep;
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
 our $VERSION = '1.003014';
 
-with 'MooseX::Object::Pluggable';
-
 use Devel::REPL::Error;
+use Scalar::Util qw/blessed/;
+use Module::Runtime ();
+
+sub load_plugin {
+  my ($self, $plugin) = @_;
+  $plugin = "Devel::REPL::Plugin::$plugin";
+  Module::Runtime::use_module("$plugin");
+  if (my $pre = $plugin->can('BEFORE_PLUGIN')) {
+      $pre->($self, $plugin);
+  }
+  Moo::Role->apply_roles_to_package(
+      'Devel::REPL', $plugin
+  );
+  if (my $pre = $plugin->can('AFTER_PLUGIN')) {
+      $pre->($self, $plugin);
+  }
+}
 
 has 'term' => (
   is => 'rw', required => 1,
@@ -366,15 +381,11 @@ L<Moose> >= 0.74
 
 =item *
 
-L<MooseX::Object::Pluggable> >= 0.0009
-
-=item *
-
 L<MooseX::Getopt> >= 0.18
 
 =item *
 
-L<namespace::autoclean>
+L<namespace::sweep>
 
 =item *
 

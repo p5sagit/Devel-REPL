@@ -1,19 +1,20 @@
 package Devel::REPL::Plugin::OutputCache;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(ArrayRef Bool);
 
 has output_cache => (
     is      => 'rw',
-    isa     => 'ArrayRef',
+    isa     => ArrayRef,
     default => sub { [] },
     lazy    => 1,
 );
 
 has warned_about_underscore => (
     is      => 'rw',
-    isa     => 'Bool',
-    default => 0,
+    isa     => Bool,
+    default => sub { 0 },
     lazy    => 1,
 );
 

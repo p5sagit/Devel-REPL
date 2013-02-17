@@ -1,8 +1,9 @@
 package Devel::REPL::Plugin::LexEnv;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
 use Lexical::Persistence;
+use MooX::Types::MooseLike::Base qw(InstanceOf ArrayRef);
 
 sub BEFORE_PLUGIN {
     my $self = shift;
@@ -10,7 +11,7 @@ sub BEFORE_PLUGIN {
 }
 
 has 'lexical_environment' => (
-  isa => 'Lexical::Persistence',
+  isa => InstanceOf('Lexical::Persistence'),
   is => 'rw',
   required => 1,
   lazy => 1,
@@ -18,7 +19,7 @@ has 'lexical_environment' => (
 );
 
 has '_hints' => (
-  isa => "ArrayRef",
+  isa => ArrayRef,
   is => "rw",
   predicate => '_has_hints',
 );

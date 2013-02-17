@@ -1,6 +1,6 @@
 package Devel::REPL::Profile;
 
-use Moose::Role;
+use Moo::Role;
 
 requires 'apply_profile';
 
@@ -12,8 +12,8 @@ Devel::REPL::Profile
 
  package Devel::REPL::Profile::MyProject;
  
- use Moose;
- use namespace::autoclean;
+ use Moo;
+ use namespace::sweep;
  
  with 'Devel::REPL::Profile';
  

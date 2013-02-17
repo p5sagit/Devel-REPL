@@ -2,30 +2,31 @@ package Devel::REPL::Plugin::Completion;
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(ArrayRef Int Bool);
 
 has current_matches => (
    is => 'rw',
-   isa => 'ArrayRef',
+   isa => ArrayRef,
    lazy => 1,
    default => sub { [] },
 );
 
 has match_index => (
    is => 'rw',
-   isa => 'Int',
+   isa => Int,
    lazy => 1,
    default => sub { 0 },
 );
 
 has no_term_class_warning => (
-   isa => "Bool",
+   isa => Bool,
    is  => "rw",
-   default => 0,
+   default => sub { 0 },
 );
 
 has do_readline_filename_completion => (  # so default is no if Completion loaded
-   isa => "Bool",
+   isa => Bool,
    is  => "rw",
    lazy => 1,
    default => sub { 0 },

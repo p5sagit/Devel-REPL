@@ -1,10 +1,12 @@
 package Devel::REPL::Plugin::ShowClass;
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(HashRef);
+use Class::MOP;
 
 has 'metaclass_cache' => (
     is      => 'ro',
-    isa     => 'HashRef',
+    isa     => HashRef,
     lazy    => 1,
     default => sub {{}}
 );

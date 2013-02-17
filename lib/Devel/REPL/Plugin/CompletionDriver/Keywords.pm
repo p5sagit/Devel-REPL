@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::CompletionDriver::Keywords;
 use Devel::REPL::Plugin;
 use B::Keywords qw/@Functions @Barewords/;
-use namespace::autoclean;
+use namespace::sweep;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

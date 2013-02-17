@@ -5,7 +5,7 @@ use Devel::REPL::Plugin;
 
 use Devel::Peek qw(Dump);
 
-use namespace::autoclean;
+use namespace::sweep;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::Timing;
 
 use Devel::REPL::Plugin;
 use Time::HiRes 'time';
-use namespace::autoclean;
+use namespace::sweep;
 
 around 'eval' => sub {
     my $orig = shift;

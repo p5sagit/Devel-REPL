@@ -1,7 +1,7 @@
 package Devel::REPL::Profile::Default;
 
-use Moose;
-use namespace::autoclean;
+use Moo;
+use namespace::sweep;
 
 with 'Devel::REPL::Profile';
 

@@ -3,7 +3,7 @@ package Devel::REPL::Plugin::Commands;
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
 
-use namespace::autoclean;
+use namespace::sweep;
 use vars qw($COMMAND_INSTALLER);
 
 has 'command_set' => (
@@ -15,7 +15,9 @@ sub BEFORE_PLUGIN {
   my ($self) = @_;
   $self->load_plugin('Packages');
   unless ($self->can('setup_commands')) {
-    $self->meta->add_method('setup_commands' => sub {});
+    my $pkg = ref $self || $self;
+    no strict 'refs';
+    *{"${pkg}::setup_commands"} = sub { };
   }
 }
 

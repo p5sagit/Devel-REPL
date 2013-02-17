@@ -1,9 +1,9 @@
 package Devel::REPL::Plugin::Nopaste;
 
 use Devel::REPL::Plugin;
-use Moose::Util::TypeConstraints;
-use namespace::autoclean;
+use namespace::sweep;
 use Scalar::Util qw(blessed);
+use MooX::Types::MooseLike::Base qw(Str);
 
 sub BEFORE_PLUGIN {
     my $self = shift;
@@ -11,28 +11,31 @@ sub BEFORE_PLUGIN {
 }
 
 has complete_session => (
-    metaclass => 'String',
     is        => 'rw',
-    isa       => 'Str',
+    isa       => Str,
     lazy      => 1,
-    default   => '',
-    handles  => {
-        add_to_session => 'append',
-    },
+    default   => sub { '' },
 );
+
+sub add_to_session {
+    my $self = shift;
+    my $session = $self->complete_session;
+    $session .= $_ for @_;
+    $self->complete_session($session);
+}
 
 has paste_title => (
     is        => 'rw',
-    isa       => 'Str',
+    isa       => Str,
     lazy      => 1,
-    default   => 'Devel::REPL session',
+    default   => sub { 'Devel::REPL session' },
 );
 
 has 'nopaste_format' => (
     is      => 'rw',
-    isa     => enum( [qw[ comment_code comment_output ]] ),
+    isa     => sub { $_[0] =~ qr[^(?:comment_code|comment_output)$] },
     lazy    => 1,
-    default => 'comment_output',
+    default => sub { 'comment_output' },
 );
 
 before eval => sub {

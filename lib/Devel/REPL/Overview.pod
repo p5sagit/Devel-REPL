@@ -231,10 +231,10 @@ take a look at it:
 
       package Devel::REPL::Profile::Default;
 
-      use Moose; ### advanced OOP system for Perl
+      use Moo; ### advanced OOP system for Perl
 
       ### keep those exports/imports out of our namespace
-      use namespace::autoclean;
+      use namespace::sweep;
 
       with 'Devel::REPL::Profile';  ## seem perldoc Muse
 

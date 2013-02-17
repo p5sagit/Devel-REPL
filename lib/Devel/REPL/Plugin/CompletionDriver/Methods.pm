@@ -1,6 +1,8 @@
 package Devel::REPL::Plugin::CompletionDriver::Methods;
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
+use Package::Stash;
+use Scalar::Util qw(blessed);
 
 sub BEFORE_PLUGIN {
     my $self = shift;
@@ -51,14 +53,13 @@ around complete => sub {
 
   # now we have $class->$incomplete
 
-  my $metaclass = Class::MOP::Class->initialize($class);
+  my $metaclass = Package::Stash->new($class);
 
   my $re = qr/^\Q$incomplete/;
 
   return $orig->(@_),
          grep { $_ =~ $re }
-         map  { $_->name }
-         $metaclass->get_all_methods;
+         $metaclass->list_all_symbols('CODE');
 };
 
 1;

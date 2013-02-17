@@ -1,14 +1,15 @@
 package Devel::REPL::Plugin::Packages;
 use Devel::REPL::Plugin;
 
-use namespace::autoclean;
+use namespace::sweep;
+use MooX::Types::MooseLike::Base qw(Str);
 
 use vars qw($PKG_SAVE);
 
 has 'current_package' => (
-  isa      => 'Str',
+  isa      => Str,
   is       => 'rw',
-  default  => 'Devel::REPL::Plugin::Packages::DefaultScratchpad',
+  default  => sub { 'Devel::REPL::Plugin::Packages::DefaultScratchpad' },
   lazy     => 1
 );
 

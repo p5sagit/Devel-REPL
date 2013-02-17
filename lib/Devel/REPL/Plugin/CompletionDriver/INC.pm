@@ -2,7 +2,7 @@ package Devel::REPL::Plugin::CompletionDriver::INC;
 use Devel::REPL::Plugin;
 use File::Next;
 use File::Spec;
-use namespace::autoclean;
+use namespace::sweep;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

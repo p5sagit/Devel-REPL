@@ -1,18 +1,19 @@
 #!/usr/bin/perl
 
 package Devel::REPL::Error;
-use Moose;
+use Moo;
+use MooX::Types::MooseLike::Base qw(Str Object AnyOf);
 
 # FIXME get nothingmuch to refactor and release his useful error object
 
 has type => (
-  isa => "Str",
+  isa => Str,
   is  => "ro",
   required => 1,
 );
 
 has message => (
-  isa => "Str|Object",
+  isa => AnyOf[Str, Object],
   is  => "ro",
   required => 1,
 );

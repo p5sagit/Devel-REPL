@@ -2,16 +2,16 @@ package Devel::REPL::Plugin::Colors;
 
 use Devel::REPL::Plugin;
 use Term::ANSIColor;
-use namespace::autoclean;
+use namespace::sweep;
 
 has normal_color => (
   is => 'rw', lazy => 1,
-  default => 'green',
+  default => sub { 'green' },
 );
 
 has error_color => (
   is => 'rw', lazy => 1,
-  default => 'bold red',
+  default => sub { 'bold red' },
 );
 
 around format_error => sub {

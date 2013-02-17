@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::Refresh;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
 use Module::Refresh;
 
 # before evaluating the code, ask Module::Refresh to refresh

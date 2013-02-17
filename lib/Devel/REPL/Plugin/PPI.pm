@@ -6,7 +6,7 @@ use Devel::REPL::Plugin;
 use PPI;
 use PPI::Dumper;
 
-use namespace::autoclean;
+use namespace::sweep;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

@@ -1,7 +1,7 @@
 package Devel::REPL::Plugin::DumpHistory;
 
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
 
 ## Seems to be a sequence issue with requires
 # requires qw{ history }; 

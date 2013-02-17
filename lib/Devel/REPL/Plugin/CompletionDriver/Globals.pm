@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::CompletionDriver::Globals;
 use Devel::REPL::Plugin;
-use namespace::autoclean;
+use namespace::sweep;
 
 sub BEFORE_PLUGIN {
     my $self = shift;
