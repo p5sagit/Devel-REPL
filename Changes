@@ -5,6 +5,8 @@
     Etheridge!)
   - fix "Attempt to use reference as lvalue in substr" warning on perl 5.16
     (thanks, ilmari!)
+  - plugins that are used by the default profile now default to being
+    installed, fixing RT#83669 and RT#83677
 
 1.003013
   - Make Sys::SigAction optional dependency for Win32 systems

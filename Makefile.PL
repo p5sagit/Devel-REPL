@@ -42,7 +42,7 @@ feature 'DDC plugin - even better format results with Data::Dumper::Concise',
     'Data::Dumper::Concise' => 0;
 
 feature 'INC completion driver - tab complete module names in use and require',
-    -default => 0,
+    -default => 1,
     'File::Next' => 0;
 
 feature 'Interrupt plugin - traps SIGINT to kill long-running lines',
@@ -50,7 +50,7 @@ feature 'Interrupt plugin - traps SIGINT to kill long-running lines',
     'Sys::SigAction' => 0;
 
 feature 'Keywords completion driver - tab complete Perl keywords and operators',
-    -default => 0,
+    -default => 1,
     'B::Keywords' => 0;
 
 feature 'LexEnv plugin - variables declared with "my" persist between statements',
