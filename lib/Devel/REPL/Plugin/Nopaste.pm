@@ -11,7 +11,7 @@ sub BEFORE_PLUGIN {
 }
 
 has complete_session => (
-    metaclass => 'String',
+    traits => ['String'],
     is        => 'rw',
     isa       => 'Str',
     lazy      => 1,

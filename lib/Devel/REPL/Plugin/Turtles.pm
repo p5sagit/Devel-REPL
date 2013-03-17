@@ -12,7 +12,7 @@ has default_command_prefix => (
 );
 
 has turtles_matchers => (
-  metaclass => "Collection::Array",
+  traits => ['Array'],
   isa => "ArrayRef[RegexpRef|CodeRef]",
   is  => "rw",
   lazy => 1,
