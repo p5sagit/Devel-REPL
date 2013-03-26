@@ -3,9 +3,6 @@ use warnings;
 
 use Test::More;
 
-use FindBin qw($Bin);
-use lib "$Bin/../t/lib";
-
 use_ok('Devel::REPL');
 
 my @plugins = qw/
