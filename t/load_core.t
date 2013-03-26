@@ -1,6 +1,7 @@
 use strict;
 use warnings;
-use Test::More 'no_plan';
+
+use Test::More;
 
 use_ok('Devel::REPL');
 use_ok('Devel::REPL::Script');
@@ -81,3 +82,5 @@ unless ($@) {
 use_ok('Devel::REPL::Plugin::ShowClass');
 use_ok('Devel::REPL::Plugin::Timing');
 use_ok('Devel::REPL::Plugin::Turtles');
+
+done_testing;

@@ -1,10 +1,10 @@
 use strict;
 use warnings;
 
+use Test::More;
+
 use FindBin qw($Bin);
 use lib "$Bin/../t/lib";
-
-use Test::More 'no_plan';
 
 use_ok('Devel::REPL');
 
@@ -59,4 +59,5 @@ sub test_load_plugin {
     }
 }
 
-1;
+done_testing;
+
