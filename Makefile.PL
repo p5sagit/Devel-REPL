@@ -74,6 +74,7 @@ feature 'Refresh plugin - automatically reload libraries with Module::Refresh',
     'Module::Refresh' => 0;
 
 test_requires 'Test::More' => '0.88';
+test_requires 'Test::Warnings';
 
 auto_install;
 WriteAll;
