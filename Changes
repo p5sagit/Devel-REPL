@@ -1,5 +1,8 @@
 Revision history for Devel-REPL
 
+  - fix issues with Term::ReadLine:PERL in tests (RT#84246) (thanks,
+    Christopher McCann!)
+
 1.003016 - 2013-03-26
   - make all plugins load again by using native traits (thanks, Zaki Mughal!)
     (RT#84011)

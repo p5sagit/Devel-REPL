@@ -1,3 +1,4 @@
+
 use strict;
 use warnings;
 
@@ -38,13 +39,20 @@ Timing
 Turtles
 /;
 
+# one $repl is shared:
+# "Looks like the problem is that you can't open multiple instances of
+# Term::ReadLine:PERL from the same object.  I was able to correct this by
+# changing the test to reuse the same Devel::REPL instance each time.  This
+# prevents the warning that causes the test to fail.  I don't think this
+# changes the spirit of the test, it's just a byproduct of how
+# Term::ReadLine::Perl works." -- RT#84246
+my $repl = Devel::REPL->new;
 for my $plugin_name (@plugins) {
     test_load_plugin($plugin_name);
 }
 
 sub test_load_plugin {
     my ($plugin_name) = @_;
-    my $repl = Devel::REPL->new;
     my $test_name = "plugin $plugin_name loaded";
     eval "use Devel::REPL::Plugin::$plugin_name";
     unless($@) {
