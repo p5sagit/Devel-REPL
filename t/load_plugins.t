@@ -41,7 +41,7 @@ Turtles
 
 # one $repl is shared:
 # "Looks like the problem is that you can't open multiple instances of
-# Term::ReadLine:PERL from the same object.  I was able to correct this by
+# Term::ReadLine:Perl from the same object.  I was able to correct this by
 # changing the test to reuse the same Devel::REPL instance each time.  This
 # prevents the warning that causes the test to fail.  I don't think this
 # changes the spirit of the test, it's just a byproduct of how
