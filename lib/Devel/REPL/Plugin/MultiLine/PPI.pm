@@ -5,12 +5,14 @@ use PPI;
 use namespace::autoclean;
 
 has 'continuation_prompt' => (
-  is => 'rw', required => 1, lazy => 1,
+  is => 'rw',
+  lazy => 1,
   default => sub { '> ' }
 );
 
 has 'line_depth' => (
-  is => 'rw', required => 1, lazy => 1,
+  is => 'rw',
+  lazy => 1,
   default => sub { 0 }
 );
 

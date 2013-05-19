@@ -12,22 +12,23 @@ with 'MooseX::Object::Pluggable';
 use Devel::REPL::Error;
 
 has 'term' => (
-  is => 'rw', required => 1,
+  is => 'rw',
   default => sub { Term::ReadLine->new('Perl REPL') }
 );
 
 has 'prompt' => (
-  is => 'rw', required => 1,
+  is => 'rw',
   default => sub { '$ ' }
 );
 
 has 'out_fh' => (
-  is => 'rw', required => 1, lazy => 1,
+  is => 'rw',
+  lazy => 1,
   default => sub { shift->term->OUT || \*STDOUT; }
 );
 
 has 'exit_repl' => (
-  is => 'rw', required => 1,
+  is => 'rw',
   default => sub { 0 }
 );
 

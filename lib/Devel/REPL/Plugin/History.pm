@@ -4,13 +4,15 @@ use Devel::REPL::Plugin;
 use namespace::autoclean;
 
 has 'history' => (
-   isa => 'ArrayRef', is => 'rw', required => 1, lazy => 1,
+   isa => 'ArrayRef', is => 'rw',
+   lazy => 1,
    default => sub { [] }
 );
 
 # lazy so ReadLineHistory Plugin can set this
 has 'have_readline_history' => (
-   is => 'rw', required => 1, lazy => 1,
+   is => 'rw',
+   lazy => 1,
    default => sub { 0 }
 );
 

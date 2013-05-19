@@ -10,18 +10,18 @@ use namespace::autoclean;
 with 'MooseX::Getopt';
 
 has 'rcfile' => (
-  is => 'ro', isa => 'Str', required => 1, default => sub { 'repl.rc' },
+  is => 'ro', isa => 'Str',
+  default => sub { 'repl.rc' },
 );
 
 has 'profile' => (
   is       => 'ro',
   isa      => 'Str',
-  required => 1,
   default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Default' },
 );
 
 has '_repl' => (
-  is => 'ro', isa => 'Devel::REPL', required => 1,
+  is => 'ro', isa => 'Devel::REPL',
   default => sub { Devel::REPL->new() }
 );
 

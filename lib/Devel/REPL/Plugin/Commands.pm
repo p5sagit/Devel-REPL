@@ -7,7 +7,7 @@ use namespace::autoclean;
 use vars qw($COMMAND_INSTALLER);
 
 has 'command_set' => (
-  is => 'ro', required => 1,
+  is => 'ro',
   lazy => 1, default => sub { {} }
 );
 

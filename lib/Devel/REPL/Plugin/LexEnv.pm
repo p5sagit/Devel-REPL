@@ -12,7 +12,6 @@ sub BEFORE_PLUGIN {
 has 'lexical_environment' => (
   isa => 'Lexical::Persistence',
   is => 'rw',
-  required => 1,
   lazy => 1,
   default => sub { Lexical::Persistence->new }
 );
