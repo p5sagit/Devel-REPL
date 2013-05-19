@@ -1,5 +1,7 @@
 Revision history for Devel-REPL
 
+  - more attempts to fix Term::ReadLine issues in tests (RT#84246, mephinet)
+
 1.003017 - 2013-04-03
   - fix issues with Term::ReadLine:Perl in tests (RT#84246) (thanks,
     Christopher McCann!)

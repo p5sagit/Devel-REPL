@@ -13,6 +13,7 @@ use Devel::REPL::Error;
 
 has 'term' => (
   is => 'rw',
+  lazy => 1,
   default => sub { Term::ReadLine->new('Perl REPL') }
 );
 
