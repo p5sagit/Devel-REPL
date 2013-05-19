@@ -470,6 +470,8 @@ Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co
 
 =item Chris Marshall
 
+=item Karen Etheridge C<< <ether@cpan.org> >>
+
 =back
 
 =head1 LICENSE
