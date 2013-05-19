@@ -5,7 +5,7 @@ use Moose;
 use namespace::autoclean;
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
-our $VERSION = '1.003017';
+our $VERSION = '1.003018';
 
 with 'MooseX::Object::Pluggable';
 

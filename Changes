@@ -1,5 +1,6 @@
 Revision history for Devel-REPL
 
+1.003018 - 2013-05-19
   - more attempts to fix Term::ReadLine issues in tests (RT#84246, mephinet)
 
 1.003017 - 2013-04-03
