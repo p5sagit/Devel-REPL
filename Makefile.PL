@@ -29,6 +29,8 @@ requires 'B::Concise';
 requires 'Term::ANSIColor';
 requires 'Devel::Peek';
 
+recommends 'PPI::XS' => '0.902';
+
 feature 'Completion plugin - extensible tab completion',
     -default => 1,
     'PPI' => 0;
