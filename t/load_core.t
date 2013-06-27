@@ -27,6 +27,7 @@ unless ($@) {
 eval 'use Lexical::Persistence';
 unless ($@) {
    use_ok('Devel::REPL::Plugin::CompletionDriver::LexEnv');
+   use_ok('Devel::REPL::Plugin::LexEnv');
 }
 
 use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
@@ -53,7 +54,6 @@ unless ($@) {
 }
 
 # use_ok('Devel::REPL::Plugin::Interrupt') unless $^O eq 'MSWin32';
-use_ok('Devel::REPL::Plugin::LexEnv');
 
 eval 'use PPI';
 unless ($@) {

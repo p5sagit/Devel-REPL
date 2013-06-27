@@ -2,6 +2,7 @@ Revision history for Devel-REPL
 
   - Fix "No arguments!" error in Plugin::DDS when nothing to dump (RT#71205,
     Ash Berlin)
+  - fix failing test when Lexical::Persistence is not installed
 
 1.003018 - 2013-05-19
   - more attempts to fix Term::ReadLine issues in tests (RT#84246, mephinet)
