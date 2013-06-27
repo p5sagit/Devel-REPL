@@ -6,6 +6,7 @@
 /blib/
 /pm_to_blib
 /.build/
+/MANIFEST
 !.gitignore
 *.bs
 /xs/*.c
@@ -19,4 +20,3 @@
 /Devel-REPL-*
 /todo.txt
 /todo/
-
