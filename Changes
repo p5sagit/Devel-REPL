@@ -1,5 +1,6 @@
 Revision history for Devel-REPL
 
+1.003019 - 2013-06-27
   - Fix "No arguments!" error in Plugin::DDS when nothing to dump (RT#71205,
     Ash Berlin)
   - fix failing test when Lexical::Persistence is not installed
