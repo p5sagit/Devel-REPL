@@ -1,3 +1,3 @@
-#!/usr/bin/env perl
+#!perl
 
 use Devel::REPL::Script 'run';

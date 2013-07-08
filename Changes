@@ -1,5 +1,8 @@
 Revision history for Devel-REPL
 
+  - shebang fixed in re.pl so it is rewritten to point to the proper perl at
+    install time (RT#70928)
+
 1.003019 - 2013-06-27
   - Fix "No arguments!" error in Plugin::DDS when nothing to dump (RT#71205,
     Ash Berlin)
