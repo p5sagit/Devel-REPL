@@ -1,66 +1,76 @@
 Revision history for Devel-REPL
 
-1.003020 - 2013-07-08
+1.003020   2013-07-08
   - shebang fixed in re.pl so it is rewritten to point to the proper perl at
     install time (RT#70928)
 
-1.003019 - 2013-06-27
+1.003019   2013-06-27
   - Fix "No arguments!" error in Plugin::DDS when nothing to dump (RT#71205,
     Ash Berlin)
   - fix failing test when Lexical::Persistence is not installed
 
-1.003018 - 2013-05-19
+1.003018   2013-05-19
   - more attempts to fix Term::ReadLine issues in tests (RT#84246, mephinet)
 
-1.003017 - 2013-04-03
+1.003017   2013-04-03
   - fix issues with Term::ReadLine:Perl in tests (RT#84246) (thanks,
     Christopher McCann!)
 
-1.003016 - 2013-03-26
+1.003016   2013-03-26
   - make all plugins load again by using native traits (thanks, Zaki Mughal!)
     (RT#84011)
 
-1.003015 - 2013-03-01
+1.003015   2013-03-01
   - fix "Attempt to use reference as lvalue in substr" warning on perl 5.16
     (thanks, ilmari!)
   - plugins that are used by the default profile now default to being
     installed, fixing RT#83669 and RT#83677
 
-1.003014 - 2012-10-31
+1.003014   2012-10-31
   - now using native Moose attribute traits, instead of the deprecated
     MooseX::AttributeHelper (thanks, Justin Hunter!)
   - now using namespace::autoclean rather than namespace::clean (thanks, Karen
     Etheridge!)
 
-1.003013
+1.003013   2012-05-19
   - Make Sys::SigAction optional dependency for Win32 systems
   - Apply some plugin related patchs from Caleb Cushing
-1.003012
+
+1.003012   2010-09-27
   - Remove some old code to avoid a future Moose warning
-1.003011
+
+1.003011   2010-06-15
   - History plugin now works for Term::ReadLine::Perl
   - Add ReadLine file completion if no other matches, fixes rt.cpan#58351
   - Add a bit more description of Turtle plugin to its POD
   - Fix rt.cpan#43151 where _-> completion had error
   - Add some missing functionality to t/load_core.t test coverage
   - Added docs on quoting and history expansion addressing rt.cpan#48459
-1.3.10
+
+1.003010   2010-05-23
   - Add exit_repl attribute as a non-signal related way to indicate the REPL should stop running.
+
 1.3.9_02
   - resolve rt.cpan#45879 by implementing Term::ReadLine::Perl support for ReadLineHistory
   - resolve rt.cpan#55491 by skipping Interrupt test for win32
+
 1.3.9_01
   - Completion works with Term::ReadLine::Perl, which works in win32 etc
-1.3.9
+
+1.003009   2010-03-08
   - Fix scary Moose 0.98 box, adding a check for ->isa('Devel::REPL') in Meta/Plugin.pm
+
 1.3.8
   - Add doc to a bunch of plugins
   - Add DDC plugin (like DDS but Data::Dumper::Concise)
   - resolve rt.cpan#44231 SIGINT does not quit the REPL just kills the line being edited
+
 1.3.7
   - resolve rt.cpan#44919 fix deprecated use of compute_all_applicable_methods
+
 1.3.6
   - had to cut a new release, something went wrong with use of M::I
+
 1.3.5
   - resolve rt.cpan#43807 three Completion drivers not loading Completion plugin
   - resolve rt.cpan#43808 infinite recursion on Plugin::Commands when Plugin::Packages not loaded
@@ -69,19 +79,24 @@ Revision history for Devel-REPL
   - add #pastetitle command to Nopaste plugin
   - If the object we're dumping has stringification overloading, then use
     it directly
-1.3.4
+
+1.003004   2009-02-15
   - resolve rt.cpan#43109 Missing deps for Default Profile Plugins
-1.3.3
+
+1.003003   2009-02-07
   - make Nopaste attribute lazy
   - make ReadLineHistory history file location portable
   - resolve rt.cpan#42904 Nopaste plugin handle undef error messages
-1.3.2
+
+1.003002   2009-01-21
   - make plugins be M::I features so dependencies are optional
   - resolve rt.cpan#42506 readdir might fail
   - test use of all plugins supported by Perl core
   - Add irc nick for oliver
-1.3.1
+
+1.003001   2009-01-08
   - Fix brokenness in the distribution manifest
+
 1.3.0
   - OutputCache: If sub _ is already defined, then warn about it (once) and refuse to overwrite it
   - Turn MultiLine::PPI's needs_continuation into a method line_needs_continuation
@@ -116,9 +131,11 @@ Revision history for Devel-REPL
   - Give "NAME" pod sections to all the plugins
   - Add AUTHOR sections where I know off the top of my head who wrote the plugin
   - Expand some of the user documentation
-1.2.1
-  - ship a working version of 1.2.0
-1.2.0
+
+1.002001   2008-02-24
+  - ship a working version of 1.002000
+
+1.002000  2008-02-24 
   - fix Plugin to work with latest Moose
   - deprecate NewlineHack plugin, cause fixed in REPL.pm
   - OutputCache plugin
@@ -127,11 +144,16 @@ Revision history for Devel-REPL
   - Interrupt plugin
   - FancyPrompt plugin
   - Colors plugin
-1.1.0
+
+1.001000   2007-06-27
   - profile system
   - fix up dependencies
   - DDS plugin
   - Commands plugin
   - Plugin metaclass
-1.0.0
+
+1.000001 2007-05-29
+  - ?
+
+1.000000   2007-05-29
   - Initial release
