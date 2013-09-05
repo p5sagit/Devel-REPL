@@ -1,5 +1,7 @@
 Revision history for Devel-REPL
 
+  - removed use of deprecated functions from Class::MOP
+
 1.003020   2013-07-08
   - shebang fixed in re.pl so it is rewritten to point to the proper perl at
     install time (RT#70928)

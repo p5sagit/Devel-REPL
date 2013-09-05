@@ -4,6 +4,7 @@ use Moose;
 use Devel::REPL;
 use File::HomeDir;
 use File::Spec;
+use Module::Runtime 'use_module';
 use vars qw($CURRENT_SCRIPT);
 use namespace::autoclean;
 
@@ -34,7 +35,7 @@ sub BUILD {
 sub load_profile {
   my ($self, $profile) = @_;
   $profile = "Devel::REPL::Profile::${profile}" unless $profile =~ /::/;
-  Class::MOP::load_class($profile);
+  use_module $profile;
   confess "Profile class ${profile} doesn't do 'Devel::REPL::Profile'"
     unless $profile->does('Devel::REPL::Profile');
   $profile->new->apply_profile($self->_repl);

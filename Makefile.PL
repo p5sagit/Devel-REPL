@@ -28,6 +28,7 @@ requires 'Task::Weaken';
 requires 'B::Concise';
 requires 'Term::ANSIColor';
 requires 'Devel::Peek';
+requires 'Module::Runtime';
 
 recommends 'PPI::XS' => '0.902';
 
