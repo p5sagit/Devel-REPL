@@ -5,8 +5,9 @@ use Devel::REPL;
 use File::HomeDir;
 use File::Spec;
 use Module::Runtime 'use_module';
-use vars qw($CURRENT_SCRIPT);
 use namespace::autoclean;
+
+our $CURRENT_SCRIPT;
 
 with 'MooseX::Getopt';
 

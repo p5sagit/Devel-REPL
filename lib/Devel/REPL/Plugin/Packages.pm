@@ -3,7 +3,7 @@ use Devel::REPL::Plugin;
 
 use namespace::autoclean;
 
-use vars qw($PKG_SAVE);
+our $PKG_SAVE;
 
 has 'current_package' => (
   isa      => 'Str',

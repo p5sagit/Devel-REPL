@@ -4,7 +4,7 @@ use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
 
 use namespace::autoclean;
-use vars qw($COMMAND_INSTALLER);
+our $COMMAND_INSTALLER;
 
 has 'command_set' => (
   is => 'ro',
