@@ -1,5 +1,6 @@
-Revision history for Devel-REPL
+Revision history for {{ $dist->name }}
 
+{{ $NEXT }}
   - removed use of deprecated functions from Class::MOP
 
 1.003020   2013-07-08
