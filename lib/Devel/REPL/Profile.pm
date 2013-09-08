@@ -11,17 +11,17 @@ Devel::REPL::Profile
 =head1 SYNOPSIS
 
  package Devel::REPL::Profile::MyProject;
- 
+
  use Moose;
  use namespace::autoclean;
- 
+
  with 'Devel::REPL::Profile';
- 
+
  sub apply_profile {
      my ($self, $repl) = @_;
      # do something here
  }
- 
+
  1;
 
 =head1 DESCRIPTION

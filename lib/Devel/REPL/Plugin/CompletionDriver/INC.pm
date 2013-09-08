@@ -101,7 +101,7 @@ around complete => sub {
     }
   };
 
-  # look through all of 
+  # look through all of
   INC: for (@INC)
   {
     my $path = $_;

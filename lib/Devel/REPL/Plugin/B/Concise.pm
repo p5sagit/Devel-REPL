@@ -17,7 +17,7 @@ sub BEFORE_PLUGIN {
 sub AFTER_PLUGIN {
   my $self = shift;
 
-  my $prefix = $self->default_command_prefix; 
+  my $prefix = $self->default_command_prefix;
 
   $self->add_turtles_matcher(qr/^
     \#(concise) \s+
@@ -63,14 +63,14 @@ Devel::REPL::Plugin::B::Concise - B::Concise dumping of expression optrees
   repl> #concise -exec -terse {
   > foo => foo(),
   > }
-  COP (0x138b1e0) nextstate 
-  OP (0x13bd280) pushmark 
-  SVOP (0x138c6a0) const  PV (0xbbab50) "foo" 
-  OP (0x13bbae0) pushmark 
-  SVOP (0x13bcee0) gv  GV (0xbbb250) *Devel::REPL::Plugin::B::Concise::foo 
-  UNOP (0x13890a0) entersub [1] 
-  LISTOP (0x13ba020) anonhash 
-  UNOP (0x5983d0) leavesub [1] 
+  COP (0x138b1e0) nextstate
+  OP (0x13bd280) pushmark
+  SVOP (0x138c6a0) const  PV (0xbbab50) "foo"
+  OP (0x13bbae0) pushmark
+  SVOP (0x13bcee0) gv  GV (0xbbb250) *Devel::REPL::Plugin::B::Concise::foo
+  UNOP (0x13890a0) entersub [1]
+  LISTOP (0x13ba020) anonhash
+  UNOP (0x5983d0) leavesub [1]
 
 =head1 DESCRIPTION
 
