@@ -54,16 +54,13 @@ for my $plugin_name (@plugins) {
 sub test_load_plugin {
     my ($plugin_name) = @_;
     my $test_name = "plugin $plugin_name loaded";
-    eval "use Devel::REPL::Plugin::$plugin_name";
-    unless($@) {
-        eval { $repl->load_plugin($plugin_name) };
-        ok(!$@, $test_name);
-    } else {
-        SKIP: {
-                skip "could not eval plugin $plugin_name", 1;
-        }
+
+    SKIP: {
+        eval "use Devel::REPL::Plugin::$plugin_name; 1"
+            or skip "could not eval plugin $plugin_name", 1;
+
+        ok(eval { $repl->load_plugin($plugin_name); 1 }, $test_name);
     }
 }
 
 done_testing;
-
