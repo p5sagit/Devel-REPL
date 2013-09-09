@@ -5,6 +5,8 @@ Revision history for {{ $dist->name }}
 1.003021  2013-09-09 02:10:45Z (Karen Etheridge)
   - removed use of deprecated functions from Class::MOP
   - long-deprecated Devel::REPL::Plugin::NewlineHack removed at last
+  - converted dist to Dist::Zilla, with a different mechanism for specifying
+    optional features (install with cpanm --interactive to be prompted)
 
 1.003020   2013-07-08
   - shebang fixed in re.pl so it is rewritten to point to the proper perl at
