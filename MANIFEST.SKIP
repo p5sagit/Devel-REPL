@@ -1,3 +1,0 @@
-#!include_default
-^(?!script/\w+\.pl|examples/[^\.]+|lib/[\/\w]+\.p(m|od)|inc/|t/\w+\.t|Makefile.PL$|README$|MANIFEST$|Changes$|META.yml$)
-/Devel-REPL-

@@ -1,6 +1,8 @@
-Revision history for Devel-REPL
+Revision history for {{ $dist->name }}
 
+{{ $NEXT }}
   - removed use of deprecated functions from Class::MOP
+  - long-deprecated Devel::REPL::Plugin::NewlineHack removed at last
 
 1.003020   2013-07-08
   - shebang fixed in re.pl so it is rewritten to point to the proper perl at

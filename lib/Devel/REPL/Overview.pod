@@ -246,7 +246,7 @@ take a look at it:
       ### it is called on profile activation
       sub apply_profile {
         my ($self, $repl) = @_;
-	### $self - no comments, $repl - current instance of Devel::REPL
+        ### $self - no comments, $repl - current instance of Devel::REPL
 
         $repl->load_plugin($_) for $self->plugins; ### load our plugins
       }

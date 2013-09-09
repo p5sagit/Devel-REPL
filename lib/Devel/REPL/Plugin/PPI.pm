@@ -37,7 +37,7 @@ Devel::REPL::Plugin::PPI - PPI dumping of Perl code
   PPI::Document
     PPI::Statement
       PPI::Token::Word    'Devel::REPL'
-        
+
   repl> #ppi {
   > warn $];
   > }
