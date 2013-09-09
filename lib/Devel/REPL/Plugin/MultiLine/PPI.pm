@@ -90,9 +90,6 @@ Devel::REPL::Plugin::MultiLine::PPI - read lines until all blocks are closed
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;

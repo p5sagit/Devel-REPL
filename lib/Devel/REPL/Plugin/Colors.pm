@@ -69,9 +69,6 @@ Devel::REPL::Plugin::Colors - add color to return values, warnings, and errors
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;

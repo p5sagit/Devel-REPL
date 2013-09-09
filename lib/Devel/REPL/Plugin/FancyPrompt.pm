@@ -65,9 +65,6 @@ Devel::REPL::Plugin::FancyPrompt - facilitate user-defined prompts
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;

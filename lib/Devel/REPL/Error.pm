@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 package Devel::REPL::Error;
 use Moose;
 
