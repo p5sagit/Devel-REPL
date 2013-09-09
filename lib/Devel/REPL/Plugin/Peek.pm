@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Peek;
 use Devel::REPL::Plugin;
 

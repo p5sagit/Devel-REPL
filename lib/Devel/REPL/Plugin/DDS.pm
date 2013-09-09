@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::DDS;
 
 use Devel::REPL::Plugin;

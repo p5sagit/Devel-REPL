@@ -3,6 +3,8 @@
 #
 # epitaph, 22nd April 2007
 
+use strict;
+use warnings;
 package Devel::REPL::Plugin::ReadLineHistory;
 
 use Devel::REPL::Plugin;

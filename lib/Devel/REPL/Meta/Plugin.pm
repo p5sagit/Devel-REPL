@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Meta::Plugin;
 
 use Moose;

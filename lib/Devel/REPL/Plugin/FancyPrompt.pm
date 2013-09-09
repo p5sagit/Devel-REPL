@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::FancyPrompt;
 
 use Devel::REPL::Plugin;

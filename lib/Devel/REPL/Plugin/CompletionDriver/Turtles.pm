@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
 use Devel::REPL::Plugin;
 use namespace::autoclean;

@@ -1,4 +1,7 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Completion;
+
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;

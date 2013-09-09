@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::LexEnv;
 
 use Devel::REPL::Plugin;

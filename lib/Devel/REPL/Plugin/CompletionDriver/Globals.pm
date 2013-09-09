@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Globals;
 use Devel::REPL::Plugin;
 use namespace::autoclean;

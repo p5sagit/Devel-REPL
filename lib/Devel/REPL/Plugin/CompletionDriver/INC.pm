@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::INC;
 use Devel::REPL::Plugin;
 use File::Next;

@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Keywords;
 use Devel::REPL::Plugin;
 use B::Keywords qw/@Functions @Barewords/;

@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
 package Devel::REPL::Plugin::B::Concise;
 use Devel::REPL::Plugin;
 

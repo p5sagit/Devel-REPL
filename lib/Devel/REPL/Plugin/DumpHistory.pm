@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::DumpHistory;
 
 use Devel::REPL::Plugin;

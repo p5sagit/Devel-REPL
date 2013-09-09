@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Packages;
 use Devel::REPL::Plugin;
 

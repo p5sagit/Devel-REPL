@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::OutputCache;
 
 use Devel::REPL::Plugin;

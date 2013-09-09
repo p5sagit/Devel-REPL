@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::MultiLine::PPI;
 
 use Devel::REPL::Plugin;
