@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+  - workaround added for plugins consuming plugins that use optional features
 
 1.003021  2013-09-09 02:10:45Z (Karen Etheridge)
   - removed use of deprecated functions from Class::MOP

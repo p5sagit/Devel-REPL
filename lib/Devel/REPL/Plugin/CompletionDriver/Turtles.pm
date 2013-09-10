@@ -2,6 +2,7 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
 use Devel::REPL::Plugin;
+use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
