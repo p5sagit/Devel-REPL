@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+1.003022  2013-09-10 01:53:10Z (Karen Etheridge)
   - workaround added for plugins consuming plugins that use optional features
   - install problems fixed when some optional prereqs are not installed, by
     properly detecting the lack of features during testing (RT#88542)
