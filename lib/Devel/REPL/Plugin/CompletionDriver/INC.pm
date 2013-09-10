@@ -66,7 +66,7 @@ around complete => sub {
   my @found;
 
   # most VCSes don't litter every single fucking directory with garbage. if you
-  # know of any other, just stick them in here. noone wants to complete
+  # know of any other, just stick them in here. No one wants to complete
   # Devel::REPL::Plugin::.svn
   my %ignored =
   (

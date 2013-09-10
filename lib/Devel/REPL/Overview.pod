@@ -31,7 +31,7 @@ You can even call a console in your script and play around in script's context
 =back
 
 
-For Ruby it would be irb, for Python is... python byitself and for perl...
+For Ruby it would be irb, for Python is... python by itself and for perl...
 and there was nothing for perl (except that ugly perl -d -e "" and several
 failed projects) until Devel::REPL was written by Matt S Trout (a.k.a. mst)
 from ShadowCatSystems L<http://www.shadowcatsystems.co.uk>.
@@ -165,7 +165,7 @@ and you don't want to type path, you can:
 
 =head2 I want it to bark, fly, jump and swim! or Plugins
 
-Plugins extend functionality and change behavor of Devel::REPL.
+Plugins extend functionality and change behavior of Devel::REPL.
 Bundled plugins are:
 
 =over 2
