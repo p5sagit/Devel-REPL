@@ -9,21 +9,23 @@ use_ok('Devel::REPL::Script');
 use_ok('Devel::REPL::Plugin::Colors');
 use_ok('Devel::REPL::Plugin::Commands');
 
-eval 'use PPI; 1'
-    and use_ok('Devel::REPL::Plugin::Completion');
+eval 'use PPI; 1' and do {
+    use_ok('Devel::REPL::Plugin::Completion');
+    use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
+    use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
 
-eval 'use File::Next; 1'
-    and use_ok('Devel::REPL::Plugin::CompletionDriver::INC');
+    eval 'use File::Next; 1'
+        and use_ok('Devel::REPL::Plugin::CompletionDriver::INC');
 
-eval 'use B::Keywords; 1'
-    and use_ok('Devel::REPL::Plugin::CompletionDriver::Keywords');
+    eval 'use B::Keywords; 1'
+        and use_ok('Devel::REPL::Plugin::CompletionDriver::Keywords');
+
+    eval 'use Lexical::Persistence; 1'
+        and use_ok('Devel::REPL::Plugin::CompletionDriver::LexEnv')
+};
 
 eval 'use Lexical::Persistence; 1'
-    and use_ok('Devel::REPL::Plugin::CompletionDriver::LexEnv')
     and use_ok('Devel::REPL::Plugin::LexEnv');
-
-use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
-use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
 
 eval 'use Data::Dump::Concise; 1'
     and use_ok('Devel::REPL::Plugin::DDC');
