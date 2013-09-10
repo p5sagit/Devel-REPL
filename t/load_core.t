@@ -23,7 +23,7 @@ SKIP: {
 
 test_plugin('Lexical::Persistence', 'LexEnv');
 
-test_plugin('Data::Dump::Concise', 'DDC');
+test_plugin('Data::Dumper::Concise', 'DDC');
 
 test_plugin('Data::Dump::Streamer', 'DDS');
 
