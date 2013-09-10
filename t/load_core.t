@@ -9,60 +9,61 @@ use_ok('Devel::REPL::Script');
 use_ok('Devel::REPL::Plugin::Colors');
 use_ok('Devel::REPL::Plugin::Commands');
 
-eval 'use PPI; 1' and do {
+SKIP: {
+    eval 'use PPI; 1' or skip 'PPI not installed: skipping completion plugins', 6;
+
     use_ok('Devel::REPL::Plugin::Completion');
     use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
     use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
 
-    eval 'use File::Next; 1'
-        and use_ok('Devel::REPL::Plugin::CompletionDriver::INC');
-
-    eval 'use B::Keywords; 1'
-        and use_ok('Devel::REPL::Plugin::CompletionDriver::Keywords');
-
-    eval 'use Lexical::Persistence; 1'
-        and use_ok('Devel::REPL::Plugin::CompletionDriver::LexEnv')
+    test_plugin('File::Next', 'CompletionDriver::INC');
+    test_plugin('B::Keywords', 'CompletionDriver::Keywords');
+    test_plugin('Lexical::Persistence', 'CompletionDriver::LexEnv');
 };
 
-eval 'use Lexical::Persistence; 1'
-    and use_ok('Devel::REPL::Plugin::LexEnv');
+test_plugin('Lexical::Persistence', 'LexEnv');
 
-eval 'use Data::Dump::Concise; 1'
-    and use_ok('Devel::REPL::Plugin::DDC');
+test_plugin('Data::Dump::Concise', 'DDC');
 
-eval 'use Data::Dump::Streamer; 1'
-    and use_ok('Devel::REPL::Plugin::DDS');
+test_plugin('Data::Dump::Streamer', 'DDS');
 
 use_ok('Devel::REPL::Plugin::DumpHistory');
 use_ok('Devel::REPL::Plugin::FancyPrompt');
 use_ok('Devel::REPL::Plugin::FindVariable');
 use_ok('Devel::REPL::Plugin::History');
 
-eval 'use Sys::SigAction; 1'
-    and use_ok('Devel::REPL::Plugin::Interrupt');
+test_plugin('Sys::SigAction', 'Interrupt');
 
 # use_ok('Devel::REPL::Plugin::Interrupt') unless $^O eq 'MSWin32';
 
-eval 'use PPI; 1'
-    and use_ok('Devel::REPL::Plugin::MultiLine::PPI');
+test_plugin('PPI', 'MultiLine::PPI');
 
-eval 'use App::Nopaste; 1'
-    and use_ok('Devel::REPL::Plugin::Nopaste');
+test_plugin('App::Nopaste', 'Nopaste');
 
 use_ok('Devel::REPL::Plugin::OutputCache');
 use_ok('Devel::REPL::Plugin::Packages');
 use_ok('Devel::REPL::Plugin::Peek');
 
-eval 'use PPI; 1'
-    and use_ok('Devel::REPL::Plugin::PPI');
+test_plugin('PPI' ,'PPI');
 
 use_ok('Devel::REPL::Plugin::ReadLineHistory');
 
-eval 'use Module::Refresh; 1'
-    and use_ok('Devel::REPL::Plugin::Refresh');
+test_plugin('Module::Refresh', 'Refresh');
 
 use_ok('Devel::REPL::Plugin::ShowClass');
 use_ok('Devel::REPL::Plugin::Timing');
 use_ok('Devel::REPL::Plugin::Turtles');
+
+sub test_plugin
+{
+    my ($prereq, $plugin) = @_;
+
+    SKIP: {
+        eval "use $prereq; 1"
+            or skip "$prereq not installed: skipping $plugin", 1;
+
+        use_ok("Devel::REPL::Plugin::$plugin");
+    }
+}
 
 done_testing;
