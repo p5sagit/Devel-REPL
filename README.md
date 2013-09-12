@@ -109,7 +109,9 @@ To allow for the sharing of run control files, you can fashion them into a
 Perl module for distribution (perhaps via the CPAN). For more information on
 this feature, please see the [Devel::REPL::Profile](http://search.cpan.org/perldoc?Devel::REPL::Profile) manual page.
 
-A default profile ships with `Devel::REPL`; it loads the following plugins:
+A `Standard` profile ships with `Devel::REPL`; it loads the following plugins
+(note that some of these require optional features -- or you can also use the
+`Minimal` profile):
 
 - [Devel::REPL::Plugin::History](http://search.cpan.org/perldoc?Devel::REPL::Plugin::History)
 - [Devel::REPL::Plugin::LexEnv](http://search.cpan.org/perldoc?Devel::REPL::Plugin::LexEnv)
@@ -161,32 +163,23 @@ control files have already been executed:
     1
     $_
 
-# REQUIREMENTS
+# OPTIONAL FEATURES
 
-In addition to the contents of the standard Perl distribution, you will need
-the following:
+In addition to the prerequisites declared in this distribution, which should be automatically installed by your [CPAN](http://search.cpan.org/perldoc?CPAN) client, there are a number of optional features, used by
+additional plugins. You can install any of these features by installing this
+distribution interactively (e.g. `cpanm --interactive Devel::REPL`).
 
-- [Moose](http://search.cpan.org/perldoc?Moose) >= 0.74
-- [MooseX::Object::Pluggable](http://search.cpan.org/perldoc?MooseX::Object::Pluggable) >= 0.0009
-- [MooseX::Getopt](http://search.cpan.org/perldoc?MooseX::Getopt) >= 0.18
-- [namespace::autoclean](http://search.cpan.org/perldoc?namespace::autoclean)
-- [File::HomeDir](http://search.cpan.org/perldoc?File::HomeDir)
-- [Task::Weaken](http://search.cpan.org/perldoc?Task::Weaken)
-- [B::Concise](http://search.cpan.org/perldoc?B::Concise)
-- [Term::ANSIColor](http://search.cpan.org/perldoc?Term::ANSIColor)
-- [Devel::Peek](http://search.cpan.org/perldoc?Devel::Peek)
-
-Optionally, some plugins if installed will require the following modules:
-
-- [PPI](http://search.cpan.org/perldoc?PPI)
-- [Data::Dump::Streamer](http://search.cpan.org/perldoc?Data::Dump::Streamer)
-- [Data::Dumper::Concise](http://search.cpan.org/perldoc?Data::Dumper::Concise)
-- [File::Next](http://search.cpan.org/perldoc?File::Next)
-- [Sys::SigAction](http://search.cpan.org/perldoc?Sys::SigAction)
-- [B::Keywords](http://search.cpan.org/perldoc?B::Keywords)
-- [Lexical::Persistence](http://search.cpan.org/perldoc?Lexical::Persistence)
-- [App::Nopaste](http://search.cpan.org/perldoc?App::Nopaste)
-- [Module::Refresh](http://search.cpan.org/perldoc?Module::Refresh)
+- Completion plugin - extensible tab completion
+- DDS plugin - better format results with Data::Dump::Streamer
+- DDC plugin - even better format results with Data::Dumper::Concise
+- INC completion driver - tab complete module names in use and require
+- Interrupt plugin - traps SIGINT to kill long-running lines
+- Keywords completion driver - tab complete Perl keywords and operators
+- LexEnv plugin - variables declared with "my" persist between statements
+- MultiLine::PPI plugin - continue reading lines until all blocks are closed
+- Nopaste plugin - upload a session\\'s input and output to a Pastebin
+- PPI plugin - PPI dumping of Perl code
+- Refresh plugin - automatically reload libraries with Module::Refresh
 
 # AUTHOR
 
