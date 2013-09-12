@@ -226,10 +226,9 @@ There are lots of contributed plugins you can find at CPAN.
 If plugins change and extend functionality of Devel::REPL, profiles
 are changing your environment (loaded plugins, constants, subs and etc.).
 
-There's only one bundled profile called `Devel::REPL::Profile::Default`, lets
-take a look at it:
+For example, the Minimal profile, `Devel::REPL::Profile::Minimal`:
 
-      package Devel::REPL::Profile::Default;
+      package Devel::REPL::Profile::Minimal;
 
       use Moose; ### advanced OOP system for Perl
 
@@ -253,10 +252,16 @@ take a look at it:
 
       1;
 
-At the moment there are no profiles on CPAN. Mostly you'll use control files.
+There is also the 'Standard' profile, which contains a number of optional (yet
+very useful) features.
+
 To enable some profile use --profile switch:
 
       $ re.pl --profile SomeProfile
+
+Alternatively, you can set the environment variable C<DEVEL_REPL_PROFILE> to
+C<SomeProfile>, or set the C<profile> key in your C<rcfile> (see
+L<Devel::REPL> for more information).
 
 =head1 See Also
 

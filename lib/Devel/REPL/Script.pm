@@ -19,7 +19,7 @@ has 'rcfile' => (
 has 'profile' => (
   is       => 'ro',
   isa      => 'Str',
-  default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Default' },
+  default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Minimal' },
 );
 
 has '_repl' => (
