@@ -259,7 +259,9 @@ To allow for the sharing of run control files, you can fashion them into a
 Perl module for distribution (perhaps via the CPAN). For more information on
 this feature, please see the L<Devel::REPL::Profile> manual page.
 
-A default profile ships with C<Devel::REPL>; it loads the following plugins:
+A C<Standard> profile ships with C<Devel::REPL>; it loads the following plugins
+(note that some of these require optional features -- or you can also use the
+C<Minimal> profile):
 
 =over 4
 
@@ -353,90 +355,37 @@ control files have already been executed:
  1
  $_
 
-=head1 REQUIREMENTS
+=head1 OPTIONAL FEATURES
 
-In addition to the contents of the standard Perl distribution, you will need
-the following:
+In addition to the prerequisites declared in this distribution, which should be automatically installed by your L<CPAN> client, there are a number of optional features, used by
+additional plugins. You can install any of these features by installing this
+distribution interactively (e.g. C<cpanm --interactive Devel::REPL>).
 
-=over 4
-
-=item *
-
-L<Moose> >= 0.74
-
-=item *
-
-L<MooseX::Object::Pluggable> >= 0.0009
-
-=item *
-
-L<MooseX::Getopt> >= 0.18
-
-=item *
-
-L<namespace::autoclean>
-
-=item *
-
-L<File::HomeDir>
-
-=item *
-
-L<Task::Weaken>
-
-=item *
-
-L<B::Concise>
-
-=item *
-
-L<Term::ANSIColor>
-
-=item *
-
-L<Devel::Peek>
-
-=back
-
-Optionally, some plugins if installed will require the following modules:
+=for comment I hope to automatically generate this data via a Pod::Weaver section
 
 =over 4
 
-=item *
+=item * Completion plugin - extensible tab completion
 
-L<PPI>
+=item * DDS plugin - better format results with Data::Dump::Streamer
 
-=item *
+=item * DDC plugin - even better format results with Data::Dumper::Concise
 
-L<Data::Dump::Streamer>
+=item * INC completion driver - tab complete module names in use and require
 
-=item *
+=item * Interrupt plugin - traps SIGINT to kill long-running lines
 
-L<Data::Dumper::Concise>
+=item * Keywords completion driver - tab complete Perl keywords and operators
 
-=item *
+=item * LexEnv plugin - variables declared with "my" persist between statements
 
-L<File::Next>
+=item * MultiLine::PPI plugin - continue reading lines until all blocks are closed
 
-=item *
+=item * Nopaste plugin - upload a session\'s input and output to a Pastebin
 
-L<Sys::SigAction>
+=item * PPI plugin - PPI dumping of Perl code
 
-=item *
-
-L<B::Keywords>
-
-=item *
-
-L<Lexical::Persistence>
-
-=item *
-
-L<App::Nopaste>
-
-=item *
-
-L<Module::Refresh>
+=item * Refresh plugin - automatically reload libraries with Module::Refresh
 
 =back
 
