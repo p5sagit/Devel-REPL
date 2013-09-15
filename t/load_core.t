@@ -3,18 +3,20 @@ use warnings;
 
 use Test::More;
 use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
+use Module::Runtime 'use_module';
+use Test::Fatal;
 
-use_ok('Devel::REPL');
-use_ok('Devel::REPL::Script');
-use_ok('Devel::REPL::Plugin::Colors');
-use_ok('Devel::REPL::Plugin::Commands');
+_use_ok('Devel::REPL');
+_use_ok('Devel::REPL::Script');
+_use_ok('Devel::REPL::Plugin::Colors');
+_use_ok('Devel::REPL::Plugin::Commands');
 
 SKIP: {
     eval 'use PPI; 1' or skip 'PPI not installed: skipping completion plugins', 6;
 
-    use_ok('Devel::REPL::Plugin::Completion');
-    use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
-    use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
+    _use_ok('Devel::REPL::Plugin::Completion');
+    _use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
+    _use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
 
     test_plugin('File::Next', 'CompletionDriver::INC');
     test_plugin('B::Keywords', 'CompletionDriver::Keywords');
@@ -27,32 +29,37 @@ test_plugin('Data::Dumper::Concise', 'DDC');
 
 test_plugin('Data::Dump::Streamer', 'DDS');
 
-use_ok('Devel::REPL::Plugin::DumpHistory');
-use_ok('Devel::REPL::Plugin::FancyPrompt');
-use_ok('Devel::REPL::Plugin::FindVariable');
-use_ok('Devel::REPL::Plugin::History');
+_use_ok('Devel::REPL::Plugin::DumpHistory');
+_use_ok('Devel::REPL::Plugin::FancyPrompt');
+_use_ok('Devel::REPL::Plugin::FindVariable');
+_use_ok('Devel::REPL::Plugin::History');
 
 test_plugin('Sys::SigAction', 'Interrupt');
 
-# use_ok('Devel::REPL::Plugin::Interrupt') unless $^O eq 'MSWin32';
+# _use_ok('Devel::REPL::Plugin::Interrupt') unless $^O eq 'MSWin32';
 
 test_plugin('PPI', 'MultiLine::PPI');
 
 test_plugin('App::Nopaste', 'Nopaste');
 
-use_ok('Devel::REPL::Plugin::OutputCache');
-use_ok('Devel::REPL::Plugin::Packages');
-use_ok('Devel::REPL::Plugin::Peek');
+_use_ok('Devel::REPL::Plugin::OutputCache');
+_use_ok('Devel::REPL::Plugin::Packages');
+_use_ok('Devel::REPL::Plugin::Peek');
 
 test_plugin('PPI' ,'PPI');
 
-use_ok('Devel::REPL::Plugin::ReadLineHistory');
+_use_ok('Devel::REPL::Plugin::ReadLineHistory');
 
 test_plugin('Module::Refresh', 'Refresh');
 
-use_ok('Devel::REPL::Plugin::ShowClass');
-use_ok('Devel::REPL::Plugin::Timing');
-use_ok('Devel::REPL::Plugin::Turtles');
+_use_ok('Devel::REPL::Plugin::ShowClass');
+_use_ok('Devel::REPL::Plugin::Timing');
+_use_ok('Devel::REPL::Plugin::Turtles');
+
+sub _use_ok {
+    my $module = shift;
+    is(exception { use_module $module }, undef, $module . ' ok');
+}
 
 sub test_plugin
 {
@@ -62,7 +69,7 @@ sub test_plugin
         eval "use $prereq; 1"
             or skip "$prereq not installed: skipping $plugin", 1;
 
-        use_ok("Devel::REPL::Plugin::$plugin");
+        _use_ok("Devel::REPL::Plugin::$plugin");
     }
 }
 
