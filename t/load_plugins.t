@@ -59,7 +59,8 @@ sub test_load_plugin {
         eval "use Devel::REPL::Plugin::$plugin_name; 1"
             or skip "could not eval plugin $plugin_name", 1;
 
-        ok(eval { $repl->load_plugin($plugin_name); 1 }, $test_name);
+        ok(eval { $repl->load_plugin($plugin_name); 1 }, $test_name)
+            or diag $@;
     }
 }
 
