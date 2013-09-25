@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+  - re-release with fixed compile test
 
 1.003023  2013-09-12 00:52:03Z (Karen Etheridge)
   - The default profile is now "Minimal", not "Default", as Default requires
