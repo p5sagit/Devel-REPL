@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+1.003025  2013-09-29 22:36:59Z (Karen Etheridge)
   - re-release with fixed prerequisites in metadata
 
 1.003024  2013-09-25 04:07:04Z (Karen Etheridge)
