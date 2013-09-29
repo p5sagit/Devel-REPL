@@ -17,6 +17,7 @@ SKIP: {
     _use_ok('Devel::REPL::Plugin::Completion');
     _use_ok('Devel::REPL::Plugin::CompletionDriver::Globals');
     _use_ok('Devel::REPL::Plugin::CompletionDriver::Methods');
+    _use_ok('Devel::REPL::Plugin::CompletionDriver::Turtles');
 
     test_plugin('File::Next', 'CompletionDriver::INC');
     test_plugin('B::Keywords', 'CompletionDriver::Keywords');
