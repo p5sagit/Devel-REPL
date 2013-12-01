@@ -6,7 +6,7 @@ requires 'apply_profile';
 
 =head1 NAME
 
-Devel::REPL::Profile
+Devel::REPL::Profile - code to execute when re.pl starts
 
 =head1 SYNOPSIS
 
