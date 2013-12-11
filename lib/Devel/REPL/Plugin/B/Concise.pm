@@ -5,7 +5,7 @@ use Devel::REPL::Plugin;
 
 use B::Concise ();
 
-B::Concise::compileOpts(qw(-nobanner));
+B::Concise::compileOpts 0.62 qw(-nobanner);
 
 use namespace::autoclean;
 
