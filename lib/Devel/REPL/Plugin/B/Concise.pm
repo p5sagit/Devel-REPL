@@ -3,9 +3,9 @@ use warnings;
 package Devel::REPL::Plugin::B::Concise;
 use Devel::REPL::Plugin;
 
-use B::Concise ();
+use B::Concise 0.62 ();
 
-B::Concise::compileOpts 0.62 qw(-nobanner);
+B::Concise::compileOpts qw(-nobanner);
 
 use namespace::autoclean;
 
