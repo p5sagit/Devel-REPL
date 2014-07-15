@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+  - fix inclusion of of optional plugin prereqs when installation is run
+    non-interactively
 
 1.003025  2013-09-29 22:36:59Z (Karen Etheridge)
   - re-release with fixed prerequisites in metadata
