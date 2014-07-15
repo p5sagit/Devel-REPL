@@ -1,10 +1,9 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Peek;
+
 use Devel::REPL::Plugin;
-
 use Devel::Peek qw(Dump);
-
 use namespace::autoclean;
 
 sub BEFORE_PLUGIN {

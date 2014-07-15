@@ -1,4 +1,5 @@
 package Devel::REPL::Error;
+
 use Moose;
 
 # FIXME get nothingmuch to refactor and release his useful error object

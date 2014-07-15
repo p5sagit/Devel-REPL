@@ -1,11 +1,10 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::PPI;
-use Devel::REPL::Plugin;
 
+use Devel::REPL::Plugin;
 use PPI;
 use PPI::Dumper;
-
 use namespace::autoclean;
 
 sub BEFORE_PLUGIN {

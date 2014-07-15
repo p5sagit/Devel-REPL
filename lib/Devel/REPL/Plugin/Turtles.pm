@@ -1,10 +1,9 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Turtles;
+
 use Devel::REPL::Plugin;
-
 use Scalar::Util qw(reftype);
-
 use namespace::autoclean;
 
 has default_command_prefix => (

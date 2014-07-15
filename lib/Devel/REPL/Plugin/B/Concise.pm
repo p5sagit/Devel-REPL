@@ -1,13 +1,12 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::B::Concise;
-use Devel::REPL::Plugin;
 
+use Devel::REPL::Plugin;
 use B::Concise 0.62 ();
+use namespace::autoclean;
 
 B::Concise::compileOpts qw(-nobanner);
-
-use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
     my $self = shift;

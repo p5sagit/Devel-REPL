@@ -1,7 +1,7 @@
-package Devel::REPL::Plugin;
-
 use strict;
 use warnings;
+package Devel::REPL::Plugin;
+
 use Devel::REPL::Meta::Plugin;
 use Moose::Role ();
 

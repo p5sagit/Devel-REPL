@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Keywords;
+
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use B::Keywords qw/@Functions @Barewords/;

@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Packages;
-use Devel::REPL::Plugin;
 
+use Devel::REPL::Plugin;
 use namespace::autoclean;
 
 our $PKG_SAVE;

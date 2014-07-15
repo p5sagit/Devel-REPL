@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::INC;
+
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use File::Next;
