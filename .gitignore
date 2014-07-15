@@ -1,5 +1,8 @@
+/.ackrc
 /.build/
-!.gitignore
-/Devel-REPL-*
+!/.gitignore
+/.latest
+/Devel-REPL-*/
+/Devel-REPL-*.tar.gz
 /todo.txt
 /todo/
