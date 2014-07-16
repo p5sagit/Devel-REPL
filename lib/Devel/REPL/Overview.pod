@@ -275,6 +275,10 @@ L<Devel::REPL::Plugin>
 
 L<Devel::REPL::Profile>
 
+=item *
+
+L<Reply>
+
 =back
 
 =cut
