@@ -75,7 +75,7 @@ your result instead of having to type it in all at once, or store it in
 intermediate variables. C<OutputCache> also provides
 C<< $_REPL->output_cache >>, an array reference of all results in this session.
 
-Devel::REPL already has a similar plugin, L<Devel::REPL::Plugin::History>.
+L<Devel::REPL> already has a similar plugin, L<Devel::REPL::Plugin::History>.
 There are some key differences though:
 
 =over 4
@@ -103,7 +103,7 @@ does the parsing -- no surprises.
 
 The C<_> sub is shared across all packages. This means that if a module is
 using the C<_> sub, then there is a conflict and you should not use this
-plugin. For example, L<Jifty> uses the C<_> sub for localization. Jifty is the
+plugin. For example, L<Jifty> uses the C<_> sub for localization. L<Jifty> is the
 only known user.
 
 =head1 SEE ALSO

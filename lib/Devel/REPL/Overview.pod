@@ -6,7 +6,7 @@ Devel::REPL::Overview - overview of Devel::REPL.
 
 =head2 What is a console? How it can assist you?
 
-  Most modern languages have consoles. Console is an interactive tool
+Most modern languages have consoles. The console is an interactive tool
 that evaluates your input while you type it.
 It gives you several advantages:
 
@@ -30,15 +30,12 @@ You can even call a console in your script and play around in script's context
 
 =back
 
-
 For Ruby it would be irb, for Python is... python by itself and for perl...
 and there was nothing for perl (except that ugly perl -d -e "" and several
-failed projects) until Devel::REPL was written by Matt S Trout (a.k.a. mst)
+failed projects) until L<Devel::REPL> was written by Matt S Trout (a.k.a. mst)
 from ShadowCatSystems L<http://www.shadowcatsystems.co.uk>.
 
-
 =head2 Devel::REPL - the Perl console
-
 
 REPL stands for Read, Evaluate, Print, Loop.
 Lets install and try it.
@@ -131,15 +128,15 @@ An example session:
 
 =head2 Control files a.k.a. I don't want to type it every time
 
-Devel::REPL has control files feature. Control files are
+L<Devel::REPL> has a control files feature. Control files are
 evaluated on session start in the same way as you would
-type them manually in console.
+type them manually in the console.
 
-Default control file is located at `$HOME/.re.pl/repl.rc` .
+The default control file is located at F<$HOME/.re.pl/repl.rc>.
 
 You can store there any statements you would normally type in.
 
-I.e. my `$HOME/.re.pl/repl.rc` has next lines:
+I.e. my F<$HOME/.re.pl/repl.rc> has next lines:
 
       use feature 'say'; # to don't write \n all the time
 
@@ -149,12 +146,12 @@ I.e. my `$HOME/.re.pl/repl.rc` has next lines:
       sub pp { print Data::Dumper->Dump([@_]) }
 
 You can have multiple control files and they can be anywhere in the
-file system. To make re.pl use some rc-file other than repl.rc
+file system. To make F<re.pl> use some rc-file other than F<repl.rc>,
 call it like this:
 
       $ re.pl --rcfile /path/to/your/rc.file
 
-If your rc-file is in `$HOME/.re.pl` directory, you can omit path:
+If your rc-file is in F<$HOME/.re.pl> directory, you can omit the path:
 
       $ re.pl --rcfile rc.file
 
@@ -172,32 +169,32 @@ Bundled plugins are:
 
 =item *
 
-Devel::REPL::Plugin::History
+L<Devel::REPL::Plugin::History>
   No comments. Simply history.
 
 =item *
 
-Devel::REPL::Plugin::!LexEnv
+L<Devel::REPL::Plugin::!LexEnv>
   Provides a lexical environment for the Devel::REPL.
 
 =item *
 
-Devel::REPL::Plugin::DDS
+L<Devel::REPL::Plugin::DDS>
   Formats return values with Data::Dump::Streamer module.
 
 =item *
 
-Devel::REPL::Plugin::Packages
+L<Devel::REPL::Plugin::Packages>
   Keeps track of which package your're in.
 
 =item *
 
-Devel::REPL::Plugin::Commands
+L<Devel::REPL::Plugin::Commands>
   Generic command creation plugin using injected functions.
 
 =item *
 
-Devel::REPL::Plugin::MultiLine::PPI
+L<Devel::REPL::Plugin::MultiLine::PPI>
   Makes Devel::REPL read your input until your block
   is finished. What does this means: you can type a part of a block
   on one line and second part on another:
@@ -216,17 +213,16 @@ Devel::REPL::Plugin::MultiLine::PPI
   but this *doesn't* mean you can print sub name or identifier
   on several lines. Don't do that! It won't work.
 
-
 =back
 
 There are lots of contributed plugins you can find at CPAN.
 
 =head1 Profiles
 
-If plugins change and extend functionality of Devel::REPL, profiles
+If plugins change and extend functionality of L<Devel::REPL>, profiles
 are changing your environment (loaded plugins, constants, subs and etc.).
 
-For example, the Minimal profile, `Devel::REPL::Profile::Minimal`:
+For example, the Minimal profile, L<Devel::REPL::Profile::Minimal>:
 
       package Devel::REPL::Profile::Minimal;
 
@@ -252,10 +248,10 @@ For example, the Minimal profile, `Devel::REPL::Profile::Minimal`:
 
       1;
 
-There is also the 'Standard' profile, which contains a number of optional (yet
+There is also the L<StandardDevel::REPL::Profile::Standard> profile, which contains a number of optional (yet
 very useful) features.
 
-To enable some profile use --profile switch:
+To enable some profile use the C<--profile> switch:
 
       $ re.pl --profile SomeProfile
 
@@ -263,6 +259,22 @@ Alternatively, you can set the environment variable C<DEVEL_REPL_PROFILE> to
 C<SomeProfile>, or set the C<profile> key in your C<rcfile> (see
 L<Devel::REPL> for more information).
 
-=head1 See Also
+=head1 SEE ALSO
 
-L<Devel::REPL>, L<Devel::REPL::Plugin>, L<Devel::REPL::Profile>
+=over 2
+
+=item *
+
+L<Devel::REPL>
+
+=item *
+
+L<Devel::REPL::Plugin>
+
+=item *
+
+L<Devel::REPL::Profile>
+
+=back
+
+=cut
