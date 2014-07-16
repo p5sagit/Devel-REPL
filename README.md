@@ -2,6 +2,10 @@
 
 Devel::REPL - a modern perl interactive shell
 
+# VERSION
+
+version 1.003026
+
 # SYNOPSIS
 
     my $repl = Devel::REPL->new;
@@ -24,7 +28,7 @@ example to pre-load certain Perl modules when working on a particular project.
 
 # USAGE
 
-To start a shell, follow one of the examples in the ["SYNOPSIS"](#SYNOPSIS) above.
+To start a shell, follow one of the examples in the ["SYNOPSIS"](#synopsis) above.
 
 Once running, the shell accepts and will attempt to execute any code given. If
 the code executes successfully you'll be shown the result, otherwise an error
@@ -47,8 +51,9 @@ run inside a Block structure (to protect the REPL in case the code blows up),
 which means a single statement doesn't require the semicolon. You can add one
 if you like, though.
 
-If you followed the first example in the ["SYNOPSIS"](#SYNOPSIS) above, you'll have the
-History and LexEnv plugins loaded (and there are many more available).
+If you followed the first example in the ["SYNOPSIS"](#synopsis) above, you'll have the
+[History](https://metacpan.org/pod/Devel::REPL::Plugin::History) and [LexEnv](https://metacpan.org/pod/Devel::REPL::Plugin::LexEnv)
+plugins loaded (and there are many more available).
 Although the shell might support "up-arrow" history, the History plugin adds
 "bang" history to that so you can re-execute chosen commands (with e.g.
 `!53`). The LexEnv plugin ensures that lexical variables declared with the
@@ -77,8 +82,6 @@ To quit from the shell, hit `Ctrl+D` or `Ctrl+C`.
     MSWin32 NOTE: control keys won't work if TERM=dumb
     because readline functionality will be disabled.
 
-
-
 ## Run Control Files
 
 For particular projects you might well end up running the same commands each
@@ -101,48 +104,48 @@ or realive to the current working directory:
     system$ re.pl --rcfile /path/to/my/project/repl.rc
 
 Within the run control file you might want to load plugins. This is covered in
-["The REPL shell object"](#The REPL shell object) section, below.
+["The REPL shell object"](#the-repl-shell-object) section, below.
 
 ## Profiles
 
 To allow for the sharing of run control files, you can fashion them into a
 Perl module for distribution (perhaps via the CPAN). For more information on
-this feature, please see the [Devel::REPL::Profile](http://search.cpan.org/perldoc?Devel::REPL::Profile) manual page.
+this feature, please see the [Devel::REPL::Profile](https://metacpan.org/pod/Devel::REPL::Profile) manual page.
 
 A `Standard` profile ships with `Devel::REPL`; it loads the following plugins
 (note that some of these require optional features -- or you can also use the
 `Minimal` profile):
 
-- [Devel::REPL::Plugin::History](http://search.cpan.org/perldoc?Devel::REPL::Plugin::History)
-- [Devel::REPL::Plugin::LexEnv](http://search.cpan.org/perldoc?Devel::REPL::Plugin::LexEnv)
-- [Devel::REPL::Plugin::DDS](http://search.cpan.org/perldoc?Devel::REPL::Plugin::DDS)
-- [Devel::REPL::Plugin::Packages](http://search.cpan.org/perldoc?Devel::REPL::Plugin::Packages)
-- [Devel::REPL::Plugin::Commands](http://search.cpan.org/perldoc?Devel::REPL::Plugin::Commands)
-- [Devel::REPL::Plugin::MultiLine::PPI](http://search.cpan.org/perldoc?Devel::REPL::Plugin::MultiLine::PPI)
-- [Devel::REPL::Plugin::Colors](http://search.cpan.org/perldoc?Devel::REPL::Plugin::Colors)
-- [Devel::REPL::Plugin::Completion](http://search.cpan.org/perldoc?Devel::REPL::Plugin::Completion)
-- [Devel::REPL::Plugin::CompletionDriver::INC](http://search.cpan.org/perldoc?Devel::REPL::Plugin::CompletionDriver::INC)
-- [Devel::REPL::Plugin::CompletionDriver::LexEnv](http://search.cpan.org/perldoc?Devel::REPL::Plugin::CompletionDriver::LexEnv)
-- [Devel::REPL::Plugin::CompletionDriver::Keywords](http://search.cpan.org/perldoc?Devel::REPL::Plugin::CompletionDriver::Keywords)
-- [Devel::REPL::Plugin::CompletionDriver::Methods](http://search.cpan.org/perldoc?Devel::REPL::Plugin::CompletionDriver::Methods)
-- [Devel::REPL::Plugin::ReadlineHistory](http://search.cpan.org/perldoc?Devel::REPL::Plugin::ReadlineHistory)
+- [Devel::REPL::Plugin::History](https://metacpan.org/pod/Devel::REPL::Plugin::History)
+- [Devel::REPL::Plugin::LexEnv](https://metacpan.org/pod/Devel::REPL::Plugin::LexEnv)
+- [Devel::REPL::Plugin::DDS](https://metacpan.org/pod/Devel::REPL::Plugin::DDS)
+- [Devel::REPL::Plugin::Packages](https://metacpan.org/pod/Devel::REPL::Plugin::Packages)
+- [Devel::REPL::Plugin::Commands](https://metacpan.org/pod/Devel::REPL::Plugin::Commands)
+- [Devel::REPL::Plugin::MultiLine::PPI](https://metacpan.org/pod/Devel::REPL::Plugin::MultiLine::PPI)
+- [Devel::REPL::Plugin::Colors](https://metacpan.org/pod/Devel::REPL::Plugin::Colors)
+- [Devel::REPL::Plugin::Completion](https://metacpan.org/pod/Devel::REPL::Plugin::Completion)
+- [Devel::REPL::Plugin::CompletionDriver::INC](https://metacpan.org/pod/Devel::REPL::Plugin::CompletionDriver::INC)
+- [Devel::REPL::Plugin::CompletionDriver::LexEnv](https://metacpan.org/pod/Devel::REPL::Plugin::CompletionDriver::LexEnv)
+- [Devel::REPL::Plugin::CompletionDriver::Keywords](https://metacpan.org/pod/Devel::REPL::Plugin::CompletionDriver::Keywords)
+- [Devel::REPL::Plugin::CompletionDriver::Methods](https://metacpan.org/pod/Devel::REPL::Plugin::CompletionDriver::Methods)
+- [Devel::REPL::Plugin::ReadlineHistory](https://metacpan.org/pod/Devel::REPL::Plugin::ReadlineHistory)
 
 ## Plugins
 
 Plugins are a way to add functionality to the REPL shell, and take advantage of
-`Devel::REPL` being based on the [Moose](http://search.cpan.org/perldoc?Moose) object system for Perl 5. This
+`Devel::REPL` being based on the [Moose](https://metacpan.org/pod/Moose) object system for Perl 5. This
 means it's simple to 'hook into' many steps of the R-E-P-L process. Plugins
 can change the way commands are interpreted, or the way their results are
 output, or even add commands to the shell environment.
 
 A number of plugins ship with `Devel::REPL`, and more are available on the
 CPAN. Some of the shipped plugins are loaded in the default profile, mentioned
-above.  These plugins can be loaded in your `$HOME/.re.pl/repl.rc` like:
+above.  These plugins can be loaded in your ` $HOME/.re.pl/repl.rc ` like:
 
     load_plugin qw( CompletionDriver::Global DumpHistory );
 
 Writing your own plugins is not difficult, and is discussed in the
-[Devel::REPL::Plugin](http://search.cpan.org/perldoc?Devel::REPL::Plugin) manual page, along with links to the manual pages of
+[Devel::REPL::Plugin](https://metacpan.org/pod/Devel::REPL::Plugin) manual page, along with links to the manual pages of
 all the plugins shipped with `Devel::REPL`.
 
 ## The REPL shell object
@@ -165,7 +168,7 @@ control files have already been executed:
 
 # OPTIONAL FEATURES
 
-In addition to the prerequisites declared in this distribution, which should be automatically installed by your [CPAN](http://search.cpan.org/perldoc?CPAN) client, there are a number of optional features, used by
+In addition to the prerequisites declared in this distribution, which should be automatically installed by your [CPAN](https://metacpan.org/pod/CPAN) client, there are a number of optional features, used by
 additional plugins. You can install any of these features by installing this
 distribution interactively (e.g. `cpanm --interactive Devel::REPL`).
 

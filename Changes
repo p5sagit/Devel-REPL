@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+1.003026  2014-07-16 01:20:41Z
   - fix inclusion of of optional plugin prereqs when installation is run
     non-interactively
 
