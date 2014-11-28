@@ -2,27 +2,27 @@ Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
 
-1.003026  2014-07-16 01:20:41Z
+1.003026   2014-07-16 01:20:41Z
   - fix inclusion of of optional plugin prereqs when installation is run
     non-interactively
 
-1.003025  2013-09-29 22:36:59Z (Karen Etheridge)
+1.003025   2013-09-29 22:36:59Z
   - re-release with fixed prerequisites in metadata
 
-1.003024  2013-09-25 04:07:04Z (Karen Etheridge)
+1.003024   2013-09-25 04:07:04Z
   - re-release with fixed compile test
 
-1.003023  2013-09-12 00:52:03Z (Karen Etheridge)
+1.003023   2013-09-12 00:52:03Z
   - The default profile is now "Minimal", not "Default", as Default requires
     some optional features; Default renamed to Standard (RT#88615)
 
-1.003022  2013-09-10 01:53:10Z (Karen Etheridge)
+1.003022   2013-09-10 01:53:10Z
   - workaround added for plugins consuming plugins that use optional features
   - install problems fixed when some optional prereqs are not installed, by
     properly detecting the lack of features during testing (RT#88542)
   - spelling fixes (RT#87691, David Steinbrunner)
 
-1.003021  2013-09-09 02:10:45Z (Karen Etheridge)
+1.003021   2013-09-09 02:10:45Z
   - removed use of deprecated functions from Class::MOP
   - long-deprecated Devel::REPL::Plugin::NewlineHack removed at last
   - converted dist to Dist::Zilla, with a different mechanism for specifying
