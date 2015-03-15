@@ -4,6 +4,7 @@ package Devel::REPL::Plugin;
 
 use Devel::REPL::Meta::Plugin;
 use Moose::Role ();
+use namespace::autoclean;
 
 sub import {
   my $target = caller;

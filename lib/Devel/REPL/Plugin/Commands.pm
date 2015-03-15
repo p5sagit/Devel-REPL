@@ -4,8 +4,8 @@ package Devel::REPL::Plugin::Commands;
 
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
-
 use namespace::autoclean;
+
 our $COMMAND_INSTALLER;
 
 has 'command_set' => (

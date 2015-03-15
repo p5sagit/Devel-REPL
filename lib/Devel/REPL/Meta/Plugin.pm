@@ -3,6 +3,7 @@ use warnings;
 package Devel::REPL::Meta::Plugin;
 
 use Moose;
+use namespace::autoclean;
 
 extends 'Moose::Meta::Role';
 

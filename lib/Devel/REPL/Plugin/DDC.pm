@@ -4,6 +4,7 @@ package Devel::REPL::Plugin::DDC;
 
 use Devel::REPL::Plugin;
 use Data::Dumper::Concise ();
+use namespace::autoclean;
 
 around 'format_result' => sub {
   my $orig = shift;

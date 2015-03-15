@@ -1,8 +1,8 @@
 package Devel::REPL::Profile;
 
 use Moose::Role;
-
 requires 'apply_profile';
+use namespace::autoclean;
 
 =head1 NAME
 

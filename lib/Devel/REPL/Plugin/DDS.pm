@@ -4,6 +4,7 @@ package Devel::REPL::Plugin::DDS;
 
 use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();
+use namespace::autoclean;
 
 around 'format_result' => sub {
    my $orig = shift;

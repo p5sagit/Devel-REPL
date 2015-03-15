@@ -10,6 +10,7 @@ package Devel::REPL::Plugin::ReadLineHistory;
 use Devel::REPL::Plugin;
 use File::HomeDir;
 use File::Spec;
+use namespace::autoclean;
 
 my $hist_file = $ENV{PERLREPL_HISTFILE} ||
     File::Spec->catfile(File::HomeDir->my_home, '.perlreplhist');
