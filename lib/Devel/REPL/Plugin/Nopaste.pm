@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Nopaste;
 
 use Devel::REPL::Plugin;
-use Moose::Util::TypeConstraints;
+use Moose::Util::TypeConstraints 'enum';
 use namespace::autoclean;
 use Scalar::Util qw(blessed);
 
