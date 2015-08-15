@@ -151,7 +151,7 @@ sub print {
 
 =head1 NAME
 
-Devel::REPL - a modern perl interactive shell
+Devel::REPL - A modern perl interactive shell
 
 =head1 SYNOPSIS
 
