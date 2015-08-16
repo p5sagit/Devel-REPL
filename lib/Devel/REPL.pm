@@ -268,61 +268,20 @@ A C<Standard> profile ships with C<Devel::REPL>; it loads the following plugins
 (note that some of these require optional features -- or you can also use the
 C<Minimal> profile):
 
-=over 4
-
-=item *
-
-L<Devel::REPL::Plugin::History>
-
-=item *
-
-L<Devel::REPL::Plugin::LexEnv>
-
-=item *
-
-L<Devel::REPL::Plugin::DDS>
-
-=item *
-
-L<Devel::REPL::Plugin::Packages>
-
-=item *
-
-L<Devel::REPL::Plugin::Commands>
-
-=item *
-
-L<Devel::REPL::Plugin::MultiLine::PPI>
-
-=item *
-
-L<Devel::REPL::Plugin::Colors>
-
-=item *
-
-L<Devel::REPL::Plugin::Completion>
-
-=item *
-
-L<Devel::REPL::Plugin::CompletionDriver::INC>
-
-=item *
-
-L<Devel::REPL::Plugin::CompletionDriver::LexEnv>
-
-=item *
-
-L<Devel::REPL::Plugin::CompletionDriver::Keywords>
-
-=item *
-
-L<Devel::REPL::Plugin::CompletionDriver::Methods>
-
-=item *
-
-L<Devel::REPL::Plugin::ReadlineHistory>
-
-=back
+=for :list
+* L<Devel::REPL::Plugin::History>
+* L<Devel::REPL::Plugin::LexEnv>
+* L<Devel::REPL::Plugin::DDS>
+* L<Devel::REPL::Plugin::Packages>
+* L<Devel::REPL::Plugin::Commands>
+* L<Devel::REPL::Plugin::MultiLine::PPI>
+* L<Devel::REPL::Plugin::Colors>
+* L<Devel::REPL::Plugin::Completion>
+* L<Devel::REPL::Plugin::CompletionDriver::INC>
+* L<Devel::REPL::Plugin::CompletionDriver::LexEnv>
+* L<Devel::REPL::Plugin::CompletionDriver::Keywords>
+* L<Devel::REPL::Plugin::CompletionDriver::Methods>
+* L<Devel::REPL::Plugin::ReadlineHistory>
 
 =head2 Plugins
 
@@ -368,30 +327,17 @@ distribution interactively (e.g. C<cpanm --interactive Devel::REPL>).
 
 =for comment I hope to automatically generate this data via a Pod::Weaver section
 
-=over 4
-
-=item * Completion plugin - extensible tab completion
-
-=item * DDS plugin - better format results with Data::Dump::Streamer
-
-=item * DDC plugin - even better format results with Data::Dumper::Concise
-
-=item * INC completion driver - tab complete module names in use and require
-
-=item * Interrupt plugin - traps SIGINT to kill long-running lines
-
-=item * Keywords completion driver - tab complete Perl keywords and operators
-
-=item * LexEnv plugin - variables declared with "my" persist between statements
-
-=item * MultiLine::PPI plugin - continue reading lines until all blocks are closed
-
-=item * Nopaste plugin - upload a session\'s input and output to a Pastebin
-
-=item * PPI plugin - PPI dumping of Perl code
-
-=item * Refresh plugin - automatically reload libraries with Module::Refresh
-
-=back
+=for :list
+* Completion plugin - extensible tab completion
+* DDS plugin - better format results with Data::Dump::Streamer
+* DDC plugin - even better format results with Data::Dumper::Concise
+* INC completion driver - tab complete module names in use and require
+* Interrupt plugin - traps SIGINT to kill long-running lines
+* Keywords completion driver - tab complete Perl keywords and operators
+* LexEnv plugin - variables declared with "my" persist between statements
+* MultiLine::PPI plugin - continue reading lines until all blocks are closed
+* Nopaste plugin - upload a session\'s input and output to a Pastebin
+* PPI plugin - PPI dumping of Perl code
+* Refresh plugin - automatically reload libraries with Module::Refresh
 
 =cut

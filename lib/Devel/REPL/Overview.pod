@@ -263,24 +263,10 @@ L<Devel::REPL> for more information).
 
 =head1 SEE ALSO
 
-=over 2
-
-=item *
-
-L<Devel::REPL>
-
-=item *
-
-L<Devel::REPL::Plugin>
-
-=item *
-
-L<Devel::REPL::Profile>
-
-=item *
-
-L<Reply>
-
-=back
+=for :list
+* L<Devel::REPL>
+* L<Devel::REPL::Plugin>
+* L<Devel::REPL::Profile>
+* L<Reply>
 
 =cut
