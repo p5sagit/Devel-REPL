@@ -25,5 +25,3 @@ sub stringify {
   sprintf "%s: %s", $self->type, $self->message;
 }
 __PACKAGE__
-
-__END__

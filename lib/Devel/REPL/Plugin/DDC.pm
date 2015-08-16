@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::DDC;
+# ABSTRACT: Format results with Data::Dumper::Concise
 
 our $VERSION = '1.003027';
 
@@ -29,9 +30,7 @@ around 'format_result' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::DDC - Format results with Data::Dumper::Concise
+=pod
 
 =head1 SYNOPSIS
 
@@ -52,4 +51,3 @@ Devel::REPL::Plugin::DDC - Format results with Data::Dumper::Concise
  $
 
 =cut
-

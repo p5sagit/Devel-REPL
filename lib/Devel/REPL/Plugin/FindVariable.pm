@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::FindVariable;
+# ABSTRACT: Finds variables by name
 
 our $VERSION = '1.003027';
 
@@ -36,13 +37,10 @@ sub find_variable {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::FindVariable - Finds variables by name
+=pod
 
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

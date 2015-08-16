@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::INC;
+# ABSTRACT: Complete module names in use and require
 
 our $VERSION = '1.003027';
 
@@ -128,13 +129,10 @@ around complete => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::CompletionDriver::INC - Complete module names in use and require
+=pod
 
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

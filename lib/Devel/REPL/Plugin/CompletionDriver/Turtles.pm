@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
+# ABSTRACT: Complete Turtles-based commands
 
 our $VERSION = '1.003027';
 
@@ -43,13 +44,10 @@ __PACKAGE__
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::CompletionDriver::Turtles - Complete Turtles-based commands
+=pod
 
 =head1 AUTHOR
 
 Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
 
 =cut
-

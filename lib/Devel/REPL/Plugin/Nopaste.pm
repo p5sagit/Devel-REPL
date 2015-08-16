@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Nopaste;
+# ABSTRACT: #nopaste to upload session's input and output
 
 our $VERSION = '1.003027';
 
@@ -98,9 +99,7 @@ sub command_pastetitle {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Nopaste - #nopaste to upload session's input and output
+=pod
 
 =head1 COMMANDS
 
@@ -152,4 +151,3 @@ Shawn M Moore, C<< <sartak at gmail dot com> >>
 =back
 
 =cut
-

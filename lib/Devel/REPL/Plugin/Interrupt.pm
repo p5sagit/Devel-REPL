@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Interrupt;
+# ABSTRACT: Traps SIGINT to kill long-running lines
 
 our $VERSION = '1.003027';
 
@@ -49,9 +50,7 @@ around 'read' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Interrupt - traps SIGINT to kill long-running lines
+=pod
 
 =head1 DESCRIPTION
 

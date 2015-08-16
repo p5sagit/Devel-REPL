@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::B::Concise;
+# ABSTRACT: B::Concise dumping of expression optrees
 
 our $VERSION = '1.003027';
 
@@ -55,10 +56,6 @@ __END__
 
 =pod
 
-=head1 NAME
-
-Devel::REPL::Plugin::B::Concise - B::Concise dumping of expression optrees
-
 =head1 SYNOPSIS
 
   repl> #concise -exec -terse {
@@ -90,5 +87,3 @@ determine the formatting, etc.
 Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
 
 =cut
-
-

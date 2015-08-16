@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Peek;
+# ABSTRACT: L<Devel::Peek> plugin for L<Devel::REPL>.
 
 our $VERSION = '1.003027';
 
@@ -33,10 +34,6 @@ __PACKAGE__
 __END__
 
 =pod
-
-=head1 NAME
-
-Devel::REPL::Plugin::Peek - L<Devel::Peek> plugin for L<Devel::REPL>.
 
 =head1 SYNOPSIS
 

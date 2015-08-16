@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::ShowClass;
+# ABSTRACT: Dump classes initialized with Class::MOP
 
 our $VERSION = '1.003027';
 
@@ -71,12 +72,3 @@ sub display_class {
 }
 
 1;
-
-__END__
-
-=head1 NAME
-
-Devel::REPL::Plugin::ShowClass - Dump classes initialized with Class::MOP
-
-=cut
-

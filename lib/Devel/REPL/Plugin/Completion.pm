@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Completion;
+# ABSTRACT: Extensible tab completion
 
 our $VERSION = '1.003027';
 
@@ -127,9 +128,7 @@ sub last_ppi_element {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Completion - Extensible tab completion
+=pod
 
 =head1 NOTE
 
@@ -143,4 +142,3 @@ Set the attribute C<do_readline_filename_completion> to 1 to enable this feature
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

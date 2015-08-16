@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::LexEnv;
+# ABSTRACT: Provide a lexical environment for the REPL
 
 our $VERSION = '1.003027';
 
@@ -67,9 +68,7 @@ around 'execute' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::LexEnv - Provide a lexical environment for the REPL
+=pod
 
 =head1 SYNOPSIS
 
@@ -91,4 +90,3 @@ Devel::REPL::Plugin::LexEnv - Provide a lexical environment for the REPL
  $ warn $s->resultset('User')->first->first_name # <-- note that $s works
 
 =cut
-

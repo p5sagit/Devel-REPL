@@ -1,4 +1,5 @@
 package Devel::REPL;
+# ABSTRACT: A modern perl interactive shell
 
 our $VERSION = '1.003027';
 
@@ -151,9 +152,10 @@ sub print {
   print $fh "\n" if $self->term->ReadLine =~ /Gnu/;
 }
 
-=head1 NAME
+1;
+__END__
 
-Devel::REPL - A modern perl interactive shell
+=pod
 
 =head1 SYNOPSIS
 
@@ -392,42 +394,4 @@ distribution interactively (e.g. C<cpanm --interactive Devel::REPL>).
 
 =back
 
-=head1 AUTHOR
-
-Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
-
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item Stevan Little - stevan (at) iinteractive.com
-
-=item Alexis Sukrieh - sukria+perl (at) sukria.net
-
-=item epitaph
-
-=item mgrimes - mgrimes (at) cpan dot org
-
-=item Shawn M Moore - sartak (at) gmail.com
-
-=item Oliver Gorwits - oliver on irc.perl.org
-
-=item Andrew Moore - C<< <amoore@cpan.org> >>
-
-=item Norbert Buchmuller C<< <norbi@nix.hu> >>
-
-=item Dave Houston C<< <dhouston@cpan.org> >>
-
-=item Chris Marshall
-
-=item Karen Etheridge C<< <ether@cpan.org> >>
-
-=back
-
-=head1 LICENSE
-
-This library is free software under the same terms as perl itself
-
 =cut
-
-1;

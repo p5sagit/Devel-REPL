@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::PPI;
+# ABSTRACT: PPI dumping of Perl code
 
 our $VERSION = '1.003027';
 
@@ -27,10 +28,6 @@ __PACKAGE__
 __END__
 
 =pod
-
-=head1 NAME
-
-Devel::REPL::Plugin::PPI - PPI dumping of Perl code
 
 =head1 SYNOPSIS
 
@@ -66,5 +63,3 @@ L<Deve::REPL::Plugin::OutputCache> there is no new value in C<_>.
 Shawn M Moore E<lt>sartak@gmail.comE<gt>
 
 =cut
-
-

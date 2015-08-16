@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::History;
+# ABSTRACT: Keep track of all input, provide shortcuts !1, !-1
 
 our $VERSION = '1.003027';
 
@@ -71,12 +72,3 @@ sub history_call {
 };
 
 1;
-
-__END__
-
-=head1 NAME
-
-Devel::REPL::Plugin::History - Keep track of all input, provide shortcuts !1, !-1
-
-=cut
-

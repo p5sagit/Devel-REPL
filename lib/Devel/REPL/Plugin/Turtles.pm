@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Turtles;
+# ABSTRACT: Generic command creation using a read hook
 
 our $VERSION = '1.003027';
 
@@ -72,9 +73,7 @@ sub match_turtles {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Turtles - Generic command creation using a read hook
+=pod
 
 =head1 DESCRIPTION
 
@@ -91,4 +90,3 @@ if other uses for that character are needed (e.g., '#' for the
 shell escape character in the PDL shell.
 
 =cut
-

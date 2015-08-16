@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Colors;
+# ABSTRACT: Add color to return values, warnings, and errors
 
 our $VERSION = '1.003027';
 
@@ -65,9 +66,7 @@ around execute => \&_wrap_warn;
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Colors - add color to return values, warnings, and errors
+=pod
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::DDS;
+# ABSTRACT: Format results with Data::Dump::Streamer
 
 our $VERSION = '1.003027';
 
@@ -32,9 +33,7 @@ around 'format_result' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
+=pod
 
 =head1 SYNOPSIS
 
@@ -55,4 +54,3 @@ Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
  $
 
 =cut
-

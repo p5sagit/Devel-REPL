@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Refresh;
+# ABSTRACT: Reload libraries with Module::Refresh
 
 our $VERSION = '1.003027';
 
@@ -22,12 +23,3 @@ around 'eval' => sub {
 };
 
 1;
-
-__END__
-
-=head1 NAME
-
-Devel::REPL::Plugin::Refresh - reload libraries with Module::Refresh
-
-=cut
-

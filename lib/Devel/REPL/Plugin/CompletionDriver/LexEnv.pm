@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::LexEnv;
+# ABSTRACT: Complete variable names in the REPL's lexical environment
 
 our $VERSION = '1.003027';
 
@@ -37,13 +38,10 @@ around complete => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::CompletionDriver::LexEnv - Complete variable names in the REPL's lexical environment
+=pod
 
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Timing;
+# ABSTRACT: Display execution times
 
 our $VERSION = '1.003027';
 
@@ -30,9 +31,7 @@ around 'eval' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::Timing - display execution times
+=pod
 
 =head1 SYNOPSIS
 
@@ -53,4 +52,3 @@ Devel::REPL::Plugin::Timing - display execution times
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

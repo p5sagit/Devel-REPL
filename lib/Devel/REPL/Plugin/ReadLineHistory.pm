@@ -6,6 +6,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::ReadLineHistory;
+# ABSTRACT: Integrate history with the facilities provided by L<Term::ReadLine>
 
 our $VERSION = '1.003027';
 
@@ -73,9 +74,7 @@ around 'run' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::ReadLineHistory - Integrate history with the facilities provided by L<Term::ReadLine>
+=pod
 
 =head1 DESCRIPTION
 
@@ -112,4 +111,3 @@ L<ReadLineHistory|Devel::REPL::Plugin::ReadHistory>> consistent for expansion wi
 L<Term::ReadLine::Gnu> support or L<Term::ReadLine::Perl>.
 
 =cut
-

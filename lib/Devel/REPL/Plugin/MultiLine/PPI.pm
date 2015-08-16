@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::MultiLine::PPI;
+# ABSTRACT: Read lines until all blocks are closed
 
 our $VERSION = '1.003027';
 
@@ -86,9 +87,7 @@ sub line_needs_continuation
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::MultiLine::PPI - read lines until all blocks are closed
+=pod
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Globals;
+# ABSTRACT: Complete global variables, packages, namespaced functions
 
 our $VERSION = '1.003027';
 
@@ -63,13 +64,10 @@ around complete => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::CompletionDriver::Globals - Complete global variables, packages, namespaced functions
+=pod
 
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::DumpHistory;
+# ABSTRACT: Plugin for Devel::REPL to save or print the history
 
 our $VERSION = '1.003027';
 
@@ -45,10 +46,7 @@ sub print_history {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::DumpHistory - Plugin for Devel::REPL to save or print
-the history.
+=pod
 
 =head1 SYNOPSIS
 

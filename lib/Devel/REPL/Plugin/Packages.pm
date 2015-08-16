@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::Packages;
+# ABSTRACT: Keep track of which package the user is in
 
 our $VERSION = '1.003027';
 
@@ -54,12 +55,3 @@ package Devel::REPL::Plugin::Packages::DefaultScratchpad;
 # declare empty scratchpad package for cleanliness
 
 1;
-
-__END__
-
-=head1 NAME
-
-Devel::REPL::Plugin::Packages - Keep track of which package the user is in
-
-=cut
-

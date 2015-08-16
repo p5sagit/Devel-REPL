@@ -1,4 +1,5 @@
 package Devel::REPL::Profile;
+# ABSTRACT: Code to execute when re.pl starts
 
 our $VERSION = '1.003027';
 
@@ -6,9 +7,10 @@ use Moose::Role;
 requires 'apply_profile';
 use namespace::autoclean;
 
-=head1 NAME
+1;
+__END__
 
-Devel::REPL::Profile - code to execute when re.pl starts
+=pod
 
 =head1 SYNOPSIS
 
@@ -81,10 +83,4 @@ as-is.
 
 Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
 
-=head1 LICENSE
-
-This library is free software under the same terms as perl itself
-
 =cut
-
-1;

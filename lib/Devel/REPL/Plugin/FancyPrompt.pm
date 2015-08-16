@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::FancyPrompt;
+# ABSTRACT: Facilitate user-defined prompts
 
 our $VERSION = '1.003027';
 
@@ -61,9 +62,7 @@ before 'read' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::FancyPrompt - facilitate user-defined prompts
+=pod
 
 =head1 SYNOPSIS
 
@@ -119,4 +118,3 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
-

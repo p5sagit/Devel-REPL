@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Devel::REPL::Plugin::OutputCache;
+# ABSTRACT: Remember past results, _ is most recent
 
 our $VERSION = '1.003027';
 
@@ -54,9 +55,7 @@ around 'eval' => sub {
 
 __END__
 
-=head1 NAME
-
-Devel::REPL::Plugin::OutputCache - remember past results, _ is most recent
+=pod
 
 =head1 SYNOPSIS
 
