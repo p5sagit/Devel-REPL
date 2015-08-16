@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
 # ABSTRACT: Complete Turtles-based commands
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load

@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::OutputCache;
 # ABSTRACT: Remember past results, _ is most recent
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

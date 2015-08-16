@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::DDS;
 # ABSTRACT: Format results with Data::Dump::Streamer
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();

@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::DumpHistory;
 # ABSTRACT: Plugin for Devel::REPL to save or print the history
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

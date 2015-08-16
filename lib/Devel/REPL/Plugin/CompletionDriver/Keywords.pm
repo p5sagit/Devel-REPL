@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Keywords;
 # ABSTRACT: Complete Perl keywords and operators
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load

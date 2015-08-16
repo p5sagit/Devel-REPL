@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Colors;
 # ABSTRACT: Add color to return values, warnings, and errors
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Term::ANSIColor;

@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Commands;
 # ABSTRACT: Generic command creation plugin using injected functions
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);

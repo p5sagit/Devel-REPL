@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Timing;
 # ABSTRACT: Display execution times
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Time::HiRes 'time';

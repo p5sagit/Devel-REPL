@@ -1,6 +1,6 @@
 package Devel::REPL::Error;
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Moose;
 use namespace::autoclean;

@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::History;
 # ABSTRACT: Keep track of all input, provide shortcuts !1, !-1
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

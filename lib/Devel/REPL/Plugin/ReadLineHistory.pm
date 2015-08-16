@@ -8,7 +8,7 @@ use warnings;
 package Devel::REPL::Plugin::ReadLineHistory;
 # ABSTRACT: Integrate history with the facilities provided by L<Term::ReadLine>
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use File::HomeDir;

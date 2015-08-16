@@ -1,7 +1,7 @@
 package Devel::REPL;
 # ABSTRACT: A modern perl interactive shell
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Term::ReadLine;
 use Moose;

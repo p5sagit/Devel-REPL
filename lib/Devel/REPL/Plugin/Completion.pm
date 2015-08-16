@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Completion;
 # ABSTRACT: Extensible tab completion
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';

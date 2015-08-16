@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::LexEnv;
 # ABSTRACT: Provide a lexical environment for the REPL
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

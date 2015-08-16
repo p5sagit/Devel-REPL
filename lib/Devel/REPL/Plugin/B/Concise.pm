@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::B::Concise;
 # ABSTRACT: B::Concise dumping of expression optrees
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use B::Concise 0.62 ();

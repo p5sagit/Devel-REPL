@@ -3,7 +3,7 @@ use warnings;
 package Devel::REPL::Plugin::Turtles;
 # ABSTRACT: Generic command creation using a read hook
 
-our $VERSION = '1.003027';
+our $VERSION = '1.003028';
 
 use Devel::REPL::Plugin;
 use Scalar::Util qw(reftype);
