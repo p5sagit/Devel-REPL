@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Peek;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Devel::Peek qw(Dump);
 use namespace::autoclean;

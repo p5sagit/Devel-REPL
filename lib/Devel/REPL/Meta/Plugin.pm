@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Meta::Plugin;
 
+our $VERSION = '1.003027';
+
 use Moose;
 use namespace::autoclean;
 

@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Turtles;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Scalar::Util qw(reftype);
 use namespace::autoclean;

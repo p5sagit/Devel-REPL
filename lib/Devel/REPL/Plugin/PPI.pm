@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::PPI;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use PPI;
 use PPI::Dumper;

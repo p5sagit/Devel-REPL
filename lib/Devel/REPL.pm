@@ -1,5 +1,7 @@
 package Devel::REPL;
 
+our $VERSION = '1.003027';
+
 use Term::ReadLine;
 use Moose;
 use namespace::autoclean;

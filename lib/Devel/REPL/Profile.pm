@@ -1,5 +1,7 @@
 package Devel::REPL::Profile;
 
+our $VERSION = '1.003027';
+
 use Moose::Role;
 requires 'apply_profile';
 use namespace::autoclean;

@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Refresh;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 use Module::Refresh;

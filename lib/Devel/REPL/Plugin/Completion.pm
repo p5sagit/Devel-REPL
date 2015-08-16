@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Completion;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;

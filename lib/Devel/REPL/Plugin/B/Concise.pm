@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::B::Concise;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use B::Concise 0.62 ();
 use namespace::autoclean;

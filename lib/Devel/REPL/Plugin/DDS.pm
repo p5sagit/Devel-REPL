@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::DDS;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();
 use namespace::autoclean;

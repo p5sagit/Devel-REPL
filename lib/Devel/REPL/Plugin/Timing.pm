@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Timing;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Time::HiRes 'time';
 use namespace::autoclean;

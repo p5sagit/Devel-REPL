@@ -1,5 +1,7 @@
 package Devel::REPL::Script;
 
+our $VERSION = '1.003027';
+
 use Moose;
 use Devel::REPL;
 use File::HomeDir;

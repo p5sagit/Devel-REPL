@@ -2,6 +2,8 @@ use strict;
 use warnings;
 package Devel::REPL::Plugin::Interrupt;
 
+our $VERSION = '1.003027';
+
 use Devel::REPL::Plugin;
 use Sys::SigAction qw(set_sig_handler);
 use namespace::autoclean;
