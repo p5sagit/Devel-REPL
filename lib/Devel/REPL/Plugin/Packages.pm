@@ -50,7 +50,8 @@ around 'eval' => sub {
   return $self->$orig(@args);
 };
 
-package Devel::REPL::Plugin::Packages::DefaultScratchpad;
+package # hide from PAUSE
+    Devel::REPL::Plugin::Packages::DefaultScratchpad;
 
 # declare empty scratchpad package for cleanliness
 
